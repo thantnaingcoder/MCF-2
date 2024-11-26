@@ -14,13 +14,15 @@ import {
   LuYoutube,
 } from "react-icons/lu";
 import { LucideMail } from "lucide-react";
+import PageLayout from "./PageLayout";
 
 const Footer = () => {
   return (
 
-    <footer className=" bg-[#404040] xl:pt-24 dark:bg-gray-800 mt-auto relative">
+    <footer className=" bg-[#404040]  dark:bg-gray-800 mt-auto ">
       {/* Newsletter Section */}
-      <div className="bg-primary-600 p-8 md:p-12 lg:p-16 absolute bottom-24 md:bottom-32 lg:bottom-48 left-4 md:left-8 lg:left-24 rounded w-[calc(100%-2rem)] md:w-[calc(100%-4rem)] lg:w-[calc(100%-8rem)] max-w-7xl mx-auto md:mb-20 lg:mb-10">
+     
+        <div className="bg-primary-600 max-w-7xl md:mx-auto md:py-16 px-5 md:px-20 rounded-lg -translate-y-20 md:-translate-y-36 mx-5  ">
         <div className=" items-center align-top flex justify-center relative">
           <img src={footericon} alt="icon" className="w-28 absolute bottom-0" />
         </div>
@@ -34,12 +36,12 @@ const Footer = () => {
               <input
                 type="email"
                 id="newsletter-email"
-                className="block w-3/4 p-4 pr-32 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                className="block lg:w-3/4 p-4 pr-32 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                 placeholder="Enter your email address"
               />
               <button
                 type="submit"
-                className="absolute right-40 top-2 bg-black text-white px-4 py-2 rounded-lg hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700"
+                className="absolute top-2 md:right-36 right-2 bg-black text-white px-4 py-2 rounded-lg hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700"
               >
                 Subscribe Now
               </button>
@@ -69,11 +71,13 @@ const Footer = () => {
         </div>
       </div>
 
+     <PageLayout>
+      
       {/* Footer Links Section */}
-      <div className="container mx-auto px-4 xl:px-0 mt-20 py-3">
-        <div className="grid gap-12 xl:grid-cols-6 xl:gap-16">
+      <div className="container  mx-auto ">
+        <div className="grid grid-cols-2  md:grid-cols-4 lg:grid-cols-5 gap-10  ">
           {/* About Section */}
-          <div className="col-span-2">
+          <div >
             <a href="/" className="flex mb-5">
               <Logo className="w-24 h-14" />
             </a>
@@ -215,6 +219,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      </PageLayout>
     </footer>
   );
 };

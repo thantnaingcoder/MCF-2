@@ -7,9 +7,9 @@ const Header = () => {
   return (
     <header className=" border-b-2 border-gray-200">
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+        <div className="flex flex-wrap justify-between items-center mx-auto max-w-7xl">
           <Link to="/" className="flex items-center">
-            <Logo className="w-28 h-18" />
+            <Logo className=" w-16  md:w-28 md:h-18" />
           </Link>
           <div className="flex items-center lg:order-2">
             <Link
@@ -97,7 +97,7 @@ const Header = () => {
               </li>
             </ul>
 
-            <form className="max-w-md mx-auto">
+            <form className="max-w-md hidden lg:flex ">
               <div className="relative">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                   <LuSearch />
