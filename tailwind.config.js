@@ -7,6 +7,10 @@ export default {
       sans: ["Hind", "Padauk", "sans-serif"],
     },
     extend: {
+      backgroundImage: {
+        'home-page': "url('./src/assets/aboutUs/heroOther/homePage.png')", // Define custom background image
+       
+      },
       fontFamily: {
         heading: ["Epilogue", "sans-serif"],
         label: ["Kite One", "sans-serif"],
