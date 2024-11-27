@@ -1,11 +1,13 @@
 import { lazy } from "react";
 
 const AboutUsPage = lazy(() => import("../features/public/pages/AboutUsPage"));
-const ContactUsPage = lazy(() => import("../features/public/pages/ContactUsPage"));
+const ContactUsPage = lazy(() =>
+  import("../features/public/pages/ContactUsPage")
+);
 const HomePage = lazy(() => import("../features/public/pages/HomePage"));
 const CoursesPage = lazy(() => import("../features/public/pages/CoursesPage"));
 const BlogPage = lazy(() => import("../features/public/pages/BlogPage"));
-
+const SupportPage = lazy(() => import("../features/support/pages/SupportPage"));
 
 const publicRoute = [
   {
@@ -18,7 +20,7 @@ const publicRoute = [
   },
   {
     path: "courses",
-    element: <CoursesPage />
+    element: <CoursesPage />,
   },
   {
     path: "blog",
@@ -27,8 +29,11 @@ const publicRoute = [
   {
     path: "contact-us",
     element: <ContactUsPage />,
-  }
-  
+  },
+  {
+    path: "support",
+    element: <SupportPage />,
+  },
 ];
 
 export default publicRoute;
