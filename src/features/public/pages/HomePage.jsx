@@ -42,6 +42,8 @@ import EmpowerSession from "../../feat-home/components/EmpowerSession";
 import TopCourseList from "../../feat-home/components/TopCourseList";
 import UserTrust from "../../feat-home/components/UserTrust";
 import Facilities from "../../feat-home/components/Facilities";
+import MovingLogo from "../../feat-home/components/MovingLogo";
+import FeedBackCarousel from "../../feat-home/components/FeedBackCarousel";
 
 const HomePage = () => {
 
@@ -244,6 +246,10 @@ const HomePage = () => {
         </div>
 
           <Facilities/>
+
+          <MovingLogo/>
+
+          <FeedBackCarousel/>
       </PageLayout>
     </div>
   );

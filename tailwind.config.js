@@ -7,6 +7,19 @@ export default {
       sans: ["Hind", "Padauk", "sans-serif"],
     },
     extend: {
+      animation: {
+				'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        border: 'border 4s linear infinite',
+			  },
+			  keyframes: {
+				'infinite-scroll': {
+				  from: { transform: 'translateX(0)' },
+				  to: { transform: 'translateX(-100%)' },
+				},
+        border: {
+          to: { '--border-angle': '360deg' },
+        },
+			  },
       backgroundImage: {
         'home-page': "url('./src/assets/aboutUs/heroOther/homePage.png')", // Define custom background image
        
