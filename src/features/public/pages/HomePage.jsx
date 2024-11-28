@@ -18,6 +18,7 @@ import {
   Clock,
   Heart,
   BookOpenCheck,
+  Home,
 } from "lucide-react";
 import Course1 from "../../../assets/course/CourseList/course1.png"
 import Course2 from "../../../assets/course/CourseList/course2.png"
@@ -44,6 +45,7 @@ import UserTrust from "../../feat-home/components/UserTrust";
 import Facilities from "../../feat-home/components/Facilities";
 import MovingLogo from "../../feat-home/components/MovingLogo";
 import FeedBackCarousel from "../../feat-home/components/FeedBackCarousel";
+import HomeFaq from "../../feat-home/components/HomeFaq";
 
 const HomePage = () => {
 
@@ -250,6 +252,8 @@ const HomePage = () => {
           <MovingLogo/>
 
           <FeedBackCarousel/>
+
+          <HomeFaq/>
       </PageLayout>
     </div>
   );
