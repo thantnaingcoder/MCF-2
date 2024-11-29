@@ -10,8 +10,10 @@ export default {
       fontFamily: {
         heading: ["Epilogue", "sans-serif"],
         label: ["Kite One", "sans-serif"],
+        subheading: ["Open Sans", "sans-serif"],
       },
       colors: {
+        feedbackBg: "#EFFAF4",
         primary: {
           50: "#ecfdf6",
           100: "#d0fbe6",
