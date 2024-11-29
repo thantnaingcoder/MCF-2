@@ -46,7 +46,8 @@ export default {
   			}
   		},
   		backgroundImage: {
-  			'home-page': "url('./src/assets/aboutUs/heroOther/homePage.png')"
+  			'home-page': "url('./src/assets/aboutUs/heroOther/homePage.png')",
+			'course-page': "url('./src/assets/course/heroSection.png')"
   		},
   		fontFamily: {
   			heading: ["Epilogue", "sans-serif"],

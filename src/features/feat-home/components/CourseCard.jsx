@@ -18,7 +18,7 @@ import {
     Clock, Heart,
     BookOpenCheck
   } from "lucide-react";
-  import Course1 from "../../../assets/course/CourseList/course6.png"
+  
 import { isNumber } from 'lodash';
 const CourseCard = ({course}) => {
   return (
