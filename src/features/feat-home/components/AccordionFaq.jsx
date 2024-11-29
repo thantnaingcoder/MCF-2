@@ -47,10 +47,10 @@ const AccordionFaq = () => {
       >
         {AccordionArray.map((item, index) => (
           <AccordionItem key={index} value={`item-${index}`}>
-            <AccordionTrigger className="text-left text-[20px]">
+            <AccordionTrigger className="text-left text-[16px] md:text-[20px]">
               {item.title}
             </AccordionTrigger>
-            <AccordionContent className="text-left text-[16px]">
+            <AccordionContent className="text-left md:text-[18px]">
               {item.description}
             </AccordionContent>
           </AccordionItem>
