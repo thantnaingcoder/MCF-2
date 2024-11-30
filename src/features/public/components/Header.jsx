@@ -5,7 +5,7 @@ import Logo from "../../../components/Logo";
 
 const Header = () => {
   const {pathname} = useLocation();
- 
+ console.log(pathname==="/");
   return (
     <header className=" border-b-2 border-gray-200">
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
@@ -58,7 +58,7 @@ const Header = () => {
               <li>
                 <Link
                   to="/"
-                  className={` ${pathname === "/" && "text-[#0CBC87]"} block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700`}
+                  className={` ${pathname == "/" && "text-[#0CBC87]"} block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700`}
                 >
                   Home
                 </Link>
@@ -66,7 +66,7 @@ const Header = () => {
               <li>
                 <Link
                   to="about-us"
-                  className={` ${pathname === "/about-us" && "text-[#0CBC87]"} block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700`}
+                  className={` ${pathname == "/about-us" && "text-[#0CBC87]"} block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700`}
                 >
                   About us
                 </Link>
