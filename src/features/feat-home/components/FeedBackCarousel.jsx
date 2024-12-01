@@ -3,7 +3,7 @@ import studen1 from "./../../../assets/studentFeedback/student1.png";
 import studen2 from "./../../../assets/studentFeedback/student2.png";
 import studen3 from "./../../../assets/studentFeedback/student3.png";
 import { FaStarHalfAlt } from "react-icons/fa";
-import { Card, CardContent } from "./../../../components/ui/card.tsx";
+import {  CardContent } from "./../../../components/ui/card.tsx";
 import { Star } from "lucide-react";
 import {
   Carousel,
@@ -59,7 +59,7 @@ const FeedBackCarousel = () => {
   ]
   return (
     <div className=" mt-5 md:mt-10">
-      <h1 className=" text-center font-heading text-[26px] font-semibold">
+      <h1 className=" text-center font-heading text-[20px] md:text-[26px] font-semibold">
         Some valuable feedback from <br /> our students
       </h1>
       <div className=" my-5 md:my-10 ">

@@ -12,44 +12,52 @@ import {
   BookOpenCheck,
   Clock,
 } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+
 import OverView from "../../feat-home/components/CourseDetailTab/OverView";
+import Curriculum from "../../feat-home/components/CourseDetailTab/Curriculum";
+import Instructor from "../../feat-home/components/CourseDetailTab/Instructor";
+import Reviews from "../../feat-home/components/CourseDetailTab/Reviews";
+import FAQs from "../../feat-home/components/CourseDetailTab/FAQs";
 const CoursesDetailPage = () => {
-  const [isOpen, setIsOpen] = React.useState([{OverView: true},{Curriculum: false},{Instructor: false},{Reviews: false},{FAQs: false}]);
+  
   
   const { slug } = useParams();
   
   return (
-    <div className="  ">
-      <div className=" bg-[#EFFAF4] ">
+    <div className=" mb-40 " >
+      <div className="bg-[#EFFAF4] ">
         <div className=" py-10">
           <PageLayout>
-            <BreadCrumb currentPageTitle={slug} />
+             <div className=" px-3 md:px-5">
+             <BreadCrumb  currentPageTitle={slug} />
+             </div>
 
-            <div className=" flex flex-col gap-5">
-              <h1 className=" font-heading font-semibold text-[#171717] text-[39px]">
+            <div className=" flex flex-col gap-5 px-3 md:px-5">
+              <h1 className=" font-heading font-semibold text-[#171717] text-[20px] md:text-[39px]">
                 Java Programming for Beginner
               </h1>
-              <p className=" text-[20px] text-[#404040] font-sans">
+              <p className=" text-[16px] md:text-[20px] text-[#404040] font-sans">
                 lorem ipsum dolor sit amet consectetur adipiscing elit sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua
               </p>
 
-              <div className=" flex items-center gap-5 6]">
-                <div className=" flex items-center gap-2">
-                  <Signal color="#FD7E14" />
-                  <p className="font-[16px] text-[#262626]">Beginner</p>
+              <div className=" flex items-center gap-1 md:gap-5 ]">
+                <div className=" flex items-center gap-1 md:gap-2">
+                  <Signal color="#FD7E14" className=" size-4 md:size-6" />
+                  <p className="text-sm md:text-[16px] text-[#262626]">Beginner</p>
                 </div>
-                <div className=" flex items-center gap-2">
-                  <GraduationCap color="#FD7E14" />
-                  <p className="font-[16px] text-[#262626]">1200 Enrolled</p>
+                <div className=" flex items-center gap-1 md:gap-2">
+                  <GraduationCap color="#FD7E14" className=" size-4 md:size-6" />
+                  <p className="text-sm md:text-[16px] text-[#262626]">1200 Enrolled</p>
                 </div>
-                <div className=" flex items-center gap-2">
-                  <Star fill="#FD7E14" color="#FD7E14" />
-                  <p className="font-[16px] text-[#262626]">4.5/5.0</p>
+                <div className=" flex items-center gap-1 md:gap-2">
+                  <Star fill="#FD7E14" color="#FD7E14" className=" size-4 md:size-6" />
+                  <p className="text-sm md:text-[16px] text-[#262626]">4.5/5.0</p>
                 </div>
-                <div className=" flex items-center gap-2">
-                  <Globe color="#FD7E14" />
-                  <p className="font-[16px] text-[#262626]">English</p>
+                <div className=" flex items-center gap-1 md:gap-2">
+                  <Globe color="#FD7E14" className=" size-4 md:size-6" />
+                  <p className="text-sm md:text-[16px] text-[#262626]">English</p>
                 </div>
               </div>
             </div>
@@ -57,32 +65,34 @@ const CoursesDetailPage = () => {
         </div>
       </div>
   
-       {/* <div className=" my-20  flex flex-col md:flex-row">
-          <div className=" sticky top-0 h-full">t1</div>
-          <div className=" sticky top-0  h-96">t12</div>
-       </div> */}
+      
       
        {/*...................... course detail............  */}
       <PageLayout>
-        <div className=" my-20     flex flex-col md:flex-row">
+        <div className="   md:mt-20    flex flex-col  md:flex-row">
 
-          <div  className="w-auto md:w-[65%]   h-[3000px]" >
+          <div  className="w-auto md:w-[65%] h-auto   " >
  
-                <div>
-                   <div className=" flex gap-3 md:gap-5">
-                    { ["Overview","Curriculum","Instructor","Reviews","FAQs"].map((item,index) => (
-                      
-                       <button onClick={() => alert(item)} key={index}  className=" border-none text-[16px] text-[#0CBC87] font-sans     focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-8 py-1 lg:py-2.5  dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
-                     {item}
-                    </button>
-                      
-                    ))}
-                     </div>
-                </div>
+              
+                <Tabs defaultValue="Overview" className="w-full ">
+  <TabsList className="w-full bg-white gap-y-3 md:gap-y-0 grid grid-cols-3 md:grid-cols-5 my-10 md:my-0 ">
+    {["Overview","Curriculum","Instructor","Reviews","FAQs"].map((item,index) => (
+      <TabsTrigger key={index} value={item} className="w-full "> {item}</TabsTrigger>
+    ))}
+    
+  </TabsList>
+  <TabsContent value="Overview" className="w-full md:h-screen md:pr-10 py-10"><OverView /></TabsContent>
+  <TabsContent value="Curriculum" className="w-full md:h-screen md:pr-10 py-10"><Curriculum /></TabsContent>
+  <TabsContent value="Instructor" className="w-full h-screen md:pr-10 py-10"><Instructor /></TabsContent>
+  <TabsContent value="Reviews" className="w-full md:h-screen md:pr-10 py-10"><Reviews /></TabsContent>
+  <TabsContent value="FAQs" className="w-full md:h-screen md:pr-10 py-10"><FAQs /></TabsContent>
+  
+</Tabs>
+
 
           </div>
            
-          <div className="md:sticky md:top-5 md:h-fit  w-auto md:w-[35%]  flex flex-col gap-5 md:gap-10  ">
+          <div className="md:sticky  md:h-fit  w-auto md:w-[35%]  flex flex-col gap-5 md:gap-10  ">
             {/* video session */}
             <div className="  bg-white overflow-hidden">
               

@@ -72,13 +72,13 @@ const TopCourseList = () => {
       ];
     
   return (
-    <div className="  mt-20">
+    <div className=" mt-10 md:mt-20">
          
 
           <LabelHeading label="Categories" heading="Our Course Categories" />
 
           {/* ..................... mobile screen course view ........... */}
-          <div className="sm:hidden my-10 grid gap-2 grid-cols-2 mx-3 ">
+          <div className="sm:hidden my-5 md:my-10 grid gap-2 grid-cols-2 mx-3 ">
             <div className=" flex gap-2 items-center">
               <ChartColumn color="#02996f" size={30} />
               <div>

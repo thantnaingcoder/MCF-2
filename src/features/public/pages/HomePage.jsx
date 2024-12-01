@@ -1,40 +1,17 @@
 import React from "react";
-import {
-  Star,
-  ChartColumn,
-  Video,
-  SquarePen,
-  Building,
-  Globe,
-  CodeXml,
-  Figma,
-  Camera,
-  FigmaIcon,
-  BadgeCheck,
-  ChartLine,
-  Users,
-  School,
-  GraduationCap,
-  Clock,
-  Heart,
-  BookOpenCheck,
-  Home,
-} from "lucide-react";
-import Course1 from "../../../assets/course/CourseList/course1.png"
-import Course2 from "../../../assets/course/CourseList/course2.png"
-import Course3 from "../../../assets/course/CourseList/course3.png"
-import Course4 from "../../../assets/course/CourseList/course4.png"
-import Course5 from "../../../assets/course/CourseList/course5.png"
-import Course6 from "../../../assets/course/CourseList/course6.png"
-import Emma from "../../../assets/course/CourseTeacher/Emma.png"
-import Olivia from "../../../assets/course/CourseTeacher/Olivia.png"
-import Lucy from "../../../assets/course/CourseTeacher/lucy.png"
-import Lucas from "../../../assets/course/CourseTeacher/MsLucas.png"
-import Ethan from "../../../assets/course/CourseTeacher/Ethan.png"
-import Ella from "../../../assets/course/CourseTeacher/MrElla.png"
-
-
-
+import { Star } from "lucide-react";
+import Course1 from "../../../assets/course/CourseList/course1.png";
+import Course2 from "../../../assets/course/CourseList/course2.png";
+import Course3 from "../../../assets/course/CourseList/course3.png";
+import Course4 from "../../../assets/course/CourseList/course4.png";
+import Course5 from "../../../assets/course/CourseList/course5.png";
+import Course6 from "../../../assets/course/CourseList/course6.png";
+import Emma from "../../../assets/course/CourseTeacher/Emma.png";
+import Olivia from "../../../assets/course/CourseTeacher/Olivia.png";
+import Lucy from "../../../assets/course/CourseTeacher/lucy.png";
+import Lucas from "../../../assets/course/CourseTeacher/MsLucas.png";
+import Ethan from "../../../assets/course/CourseTeacher/Ethan.png";
+import Ella from "../../../assets/course/CourseTeacher/MrElla.png";
 
 import PageLayout from "../components/PageLayout";
 import CourseCard from "../../feat-home/components/CourseCard";
@@ -48,94 +25,75 @@ import FeedBackCarousel from "../../feat-home/components/FeedBackCarousel";
 import HomeFaq from "../../feat-home/components/HomeFaq";
 
 const HomePage = () => {
-
   const topCourse = [
-    { 
-      id:1 ,
-      label:"Video Editing",
+    {
+      id: 1,
+      label: "Video Editing",
       image: Course1,
-      level : "Beginner",
-      lesson : 18,
-      header : "Essential Video Editing Techniques",
-      instructor : "Ms.Ella",
-      instructorPhoto:  Ella,
-      price : 12.00
-
-
-
+      level: "Beginner",
+      lesson: 18,
+      header: "Essential Video Editing Techniques",
+      instructor: "Ms.Ella",
+      instructorPhoto: Ella,
+      price: 12.0,
     },
-    { 
-      id:2 ,
-      label:"Business",
+    {
+      id: 2,
+      label: "Business",
       image: Course2,
-      level : "Advanced",
-      lesson : 20,
-      header : "Fundamentals of Business Strategy",
-      instructor : "Olivia",
-      instructorPhoto:  Olivia,
-      price : "free"
-
-
-
+      level: "Advanced",
+      lesson: 20,
+      header: "Fundamentals of Business Strategy",
+      instructor: "Olivia",
+      instructorPhoto: Olivia,
+      price: "free",
     },
-    { 
-      id:3 ,
-      label:"Content Writing",
+    {
+      id: 3,
+      label: "Content Writing",
       image: Course3,
-      level : "Intermediate",
-      lesson : 15,
-      header : "Content writing Essential",
-      instructor : "Lucy",
-      instructorPhoto:  Lucy,
-      price : 15.00
-
-
-
+      level: "Intermediate",
+      lesson: 15,
+      header: "Content writing Essential",
+      instructor: "Lucy",
+      instructorPhoto: Lucy,
+      price: 15.0,
     },
-    { 
-      id:4 ,
-      label:"Development",
+    {
+      id: 4,
+      label: "Development",
       image: Course4,
-      level : "Beginner",
-      lesson : 40,
-      header : "Fullstack web development",
-      instructor : "Ms.Lucas",
-      instructorPhoto:  Lucas,
-      price : 20.00
-
-
-
+      level: "Beginner",
+      lesson: 40,
+      header: "Fullstack web development",
+      instructor: "Ms.Lucas",
+      instructorPhoto: Lucas,
+      price: 20.0,
     },
-    { 
-      id:5 ,
-      label:"Language",
+    {
+      id: 5,
+      label: "Language",
       image: Course5,
-      level : "Beginner",
-      lesson : 30,
-      header : "Mastering Conversational Language",
-      instructor : "Mr.Ethan",
-      instructorPhoto:  Ethan,
-      price : 12.00
-
-
-
+      level: "Beginner",
+      lesson: 30,
+      header: "Mastering Conversational Language",
+      instructor: "Mr.Ethan",
+      instructorPhoto: Ethan,
+      price: 12.0,
     },
-    { 
-      id:6 ,
-      label:"Web Design",
+    {
+      id: 6,
+      label: "Web Design",
       image: Course6,
-      level : "Beginner",
-      lesson : 26,
-      header : "Basic Of Web Design",
-      instructor : "Ms.Emma",
-      instructorPhoto:  Emma,
-      price : 25.00
+      level: "Beginner",
+      lesson: 26,
+      header: "Basic Of Web Design",
+      instructor: "Ms.Emma",
+      instructorPhoto: Emma,
+      price: 25.0,
+    },
+  ];
 
-
-
-    }
-  ]
-  
   return (
     <div className="  mb-40">
       <div className=" relative w-full bg-home-page h-[200px] md:h-[600px] max-h-[750px] bg-cover bg-center">
@@ -230,7 +188,7 @@ const HomePage = () => {
 
         <UserTrust />
 
-        <div className=" mt-20">
+        <div className=" mt-10 md:mt-20">
           <LabelHeading
             label="Discover News"
             heading="Our Top Listed courses"
@@ -238,22 +196,20 @@ const HomePage = () => {
 
           {/* course card */}
 
-          <div className=" px-1 grid grid-cols-2 gap-3 lg:grid-cols-3 md:gap-y-10 gap-y-5">
-
-            { topCourse.map((course) => (
+          <div className=" px-1 grid grid-cols-1 md:grid-cols-2 gap-3 lg:grid-cols-3 md:gap-y-10 gap-y-5">
+            {topCourse.map((course) => (
               <CourseCard key={course.id} course={course} />
             ))}
-           
           </div>
         </div>
 
-          <Facilities/>
+        <Facilities />
 
-          <MovingLogo/>
+        <MovingLogo />
 
-          <FeedBackCarousel/>
+        <FeedBackCarousel />
 
-          <HomeFaq/>
+        <HomeFaq />
       </PageLayout>
     </div>
   );
