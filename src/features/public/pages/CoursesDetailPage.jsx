@@ -25,7 +25,7 @@ const CoursesDetailPage = () => {
   const { slug } = useParams();
   
   return (
-    <div className=" mb-40 " >
+    <div className=" mb-40  " >
       <div className="bg-[#EFFAF4] ">
         <div className=" py-10">
           <PageLayout>
@@ -69,7 +69,7 @@ const CoursesDetailPage = () => {
       
        {/*...................... course detail............  */}
       <PageLayout>
-        <div className="   md:mt-20    flex flex-col  md:flex-row">
+        <div className="   md:mt-20 mx-2 flex flex-col  md:flex-row">
 
           <div  className="w-auto md:w-[65%] h-auto   " >
  

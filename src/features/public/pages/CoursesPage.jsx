@@ -190,6 +190,9 @@ const CoursesPage = () => {
                       {course.instructor}
                     </span>
                   </div>
+                  <button onClick={() => nav(`/courses/course-detail/${course.slug}`)}  className=" md:hidden text-white  bg-[#0CBC87] hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 ">
+                    Know Detail
+                  </button>
                   <span className="text-md md:text-[25px] font-bold text-emerald-500">
                     {isNumber(course.price)
                       ? `$${course.price}.00`
