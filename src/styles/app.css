@@ -1,6 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Kite+One&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Hind:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap&family=Kite+One&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -69,4 +67,36 @@
   }
 }
 
+/* Hide scrollbar for all browsers */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.swiper {
+  padding: 50px 0;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.swiper-slide {
+  transition: transform 0.3s ease;
+}
+.swiper-3d .swiper-slide-shadow-left {
+  background-image: none !important ;
+}
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none !important ;
+}
+
+.swiper-slide-active {
+  transform: scale(2);
+}
+.swiper-slide:not(.swiper-slide-active) {
+  /* margin-right: 80px !important; */
+  opacity: 0.8;
+}
