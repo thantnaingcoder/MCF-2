@@ -31,7 +31,7 @@ const publicRoute = [
     element: <CoursesPage />
   },
   {
-    path: "courses-detail",
+    path: "courses/course-detail/:slug",
     element: <CoursesDetailPage />
   },
   {
