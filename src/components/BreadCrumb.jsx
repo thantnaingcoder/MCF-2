@@ -7,16 +7,16 @@ const BreadCrumb = ({ currentPageTitle, links }) => {
   const navigate = useNavigate();
 
   return (
-    <div className=" w-full flex items-center justify-between gap-3 mb-5 border-y py-2">
+    <div className=" w-full flex items-center justify-between gap-3 mb-5  py-2">
       <nav className="flex" aria-label="Breadcrumb">
         <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
           <li className="inline-flex  items-center">
             <Link
-              to="/dashboard"
-              className="inline-flex gap-1 items-center text-sm font-medium text-gray-700 hover:text-primary-600 dark:text-gray-400 dark:hover:text-white"
+              to="/courses"
+              className="inline-flex gap-1 items-center text-[16px] font-medium text-[#737373] hover:text-primary-600 dark:text-gray-400 dark:hover:text-white"
             >
-              <LuHome />
-              Home
+              {/* <LuHome /> */}
+              Course
             </Link>
           </li>
 
@@ -25,7 +25,7 @@ const BreadCrumb = ({ currentPageTitle, links }) => {
               <li key={index} className="inline-flex  items-center">
                 <Link
                   to={link.path}
-                  className="inline-flex gap-1 items-center text-sm font-medium text-gray-700 hover:text-primary-600 dark:text-gray-400 dark:hover:text-white"
+                  className="inline-flex  gap-1 items-center text-sm font-medium text-gray-700 hover:text-primary-600 dark:text-gray-400 dark:hover:text-white"
                 >
                   <LuChevronRight />
                   {link.title}
@@ -36,14 +36,14 @@ const BreadCrumb = ({ currentPageTitle, links }) => {
           <li aria-current="page">
             <div className="flex items-center">
               <HiChevronRight />
-              <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">
+              <span className="ms-1 cursor-pointer font-medium text-[16px] text-[#171717] md:ms-2 dark:text-gray-400">
                 {currentPageTitle}
               </span>
             </div>
           </li>
         </ol>
       </nav>
-      <div className=" flex items-center">
+      {/* <div className=" flex items-center">
         <button
           type="button"
           onClick={() => navigate(-1)}
@@ -58,7 +58,7 @@ const BreadCrumb = ({ currentPageTitle, links }) => {
         >
           <LuChevronRight />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

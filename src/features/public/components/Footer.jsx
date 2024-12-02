@@ -19,12 +19,19 @@ import PageLayout from "./PageLayout";
 const Footer = () => {
   return (
 
-    <footer className=" bg-[#404040]  dark:bg-gray-800 mt-auto ">
+    <footer className=" bg-neutral-700 dark:bg-gray-800 mt-auto ">
+      {/* Newsletter Section */}
+
+      <div className="bg-primary-600 max-w-7xl  xl:mx-auto md:py-16 px-5 md:px-20 rounded-lg -translate-y-20 md:-translate-y-36 mx-5  ">
+
+
+    <footer className=" bg-[#404040]  dark:bg-gray-800 mt-auto  ">
       {/* Newsletter Section */}
      
-        <div className="bg-primary-600 max-w-7xl md:mx-auto md:py-16 px-5 md:px-20 rounded-lg -translate-y-20 md:-translate-y-36 mx-5  ">
+        <div className="bg-primary-600 max-w-7xl md:mx-auto md:py-16 px-10 md:px-20 lg:mx-20 xl:mx-auto  rounded-lg -translate-y-20 md:-translate-y-36 mx-5  ">
+
         <div className=" items-center align-top flex justify-center relative">
-          <img src={footericon} alt="icon" className="w-28 absolute bottom-0" />
+          <img src={footericon} alt="icon" className=" hidden md:block w-28 absolute bottom-0" />
         </div>
 
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start">
@@ -71,17 +78,168 @@ const Footer = () => {
         </div>
       </div>
 
+
+      <PageLayout>
+        {/* Footer Links Section */}
+        <div className="container mx-auto px-5 xl:px-0 ">
+          <div className="grid grid-cols-2  md:grid-cols-4  xl:grid-cols-5 gap-10  ">
+            {/* About Section */}
+            <div>
+              <a href="/" className="flex mb-5">
+                <Logo className="w-24 h-14" />
+              </a>
+              <p className="text-white dark:text-gray-400">
+                Pathway Academy provides the <br /> tools and guidance to turn
+                your <br /> goals into achievements.
+              </p>
+            </div>
+            {/* Services */}
+            <div>
+              <h3 className="mb-4 text-sm font-semibold text-white uppercase">
+                Our Services
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#" className="text-xs text-white hover:underline">
+                    Business Strategy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs text-white hover:underline">
+                    Web Design
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs text-white hover:underline">
+                    Digital Marketing
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs text-white hover:underline">
+                    Content Writing
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs text-white hover:underline">
+                    Language
+                  </a>
+                </li>
+              </ul>
+            </div>
+            {/* Quick Links */}
+            <div>
+              <h3 className="mb-4 text-sm font-semibold text-white uppercase">
+                Quick Links
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="about-us"
+                    className="text-xs text-white hover:underline"
+                  >
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="contact-us"
+                    className="text-xs text-white hover:underline"
+                  >
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a href="blog" className="text-xs text-white hover:underline">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="signup"
+                    className="text-xs text-white hover:underline"
+                  >
+                    Signup Student
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-xs text-white hover:underline">
+                    Signup Instructor
+                  </a>
+                </li>
+              </ul>
+            </div>
+            {/* Community */}
+            <div>
+              <h3 className="mb-4 text-sm font-semibold text-white uppercase">
+                Community
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="support"
+                    className=" flex items-center gap-1 text-xs text-white hover:underline"
+                  >
+                    <span> Support</span> <LuExternalLink />
+                  </a>
+                </li>
+                <li>
+                  <a href="faq" className="text-xs text-white hover:underline">
+                    FAQ
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="privacy-policy"
+                    className="text-xs text-white hover:underline"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="termsandcondition"
+                    className="text-xs text-white hover:underline"
+                  >
+                    Terms & Conditions
+                  </a>
+                </li>
+              </ul>
+            </div>
+            {/* Social Links */}
+            <div>
+              <h3 className="mb-4 text-sm font-semibold text-white uppercase">
+                App Available On
+              </h3>
+              <div className="flex gap-2 mb-4">
+                <img
+                  src={androidapp}
+                  className="w-24 h-auto"
+                  alt="Android Store"
+                />
+                <img src={iosapp} className="w-24 h-auto" alt="iOS Store" />
+              </div>
+              <h3 className="mb-2 text-sm font-semibold text-white uppercase">
+                Follow Us
+              </h3>
+              <div className="flex gap-4">
+                <a href="#" className="text-white">
+                  <LuFacebook className="w-6 h-6 bg-[#525252] p-1 rounded" />
+                </a>
+                <a href="#" className="text-white">
+                  <LuInstagram className="w-6 h-6 bg-[#525252] p-1 rounded" />
+
      <PageLayout>
       
       {/* Footer Links Section */}
-      <div className="container  mx-auto ">
-        <div className="grid grid-cols-2  md:grid-cols-4 lg:grid-cols-5 gap-10  ">
+      <div className="max-w-7xl md:mx-auto mb-5 mx-5 sm:px-10 md:px-20 lg:mx-20 xl:mx-auto ">
+      
+        <div className="grid grid-cols-3  md:grid-cols-4 lg:grid-cols-5 gap-y-10 gap-2 md:gap-10  ">
           {/* About Section */}
-          <div >
-            <a href="/" className="flex mb-5">
+          <div className=" " >
+            <a href="/" className="flex md:mb-5">
               <Logo className="w-24 h-14" />
             </a>
-            <p className="text-white dark:text-gray-400">
+            <p className="text-white text-sm md:text-base dark:text-gray-400">
               Pathway Academy provides the <br /> tools and guidance to turn
               your <br /> goals into achievements.
             </p>
@@ -91,7 +249,7 @@ const Footer = () => {
             <h3 className="mb-4 text-sm font-semibold text-white uppercase">
               Our Services
             </h3>
-            <ul className="space-y-2">
+            <ul className="md:space-y-2">
               <li>
                 <a href="#" className="text-xs text-white hover:underline">
                   Business Strategy
@@ -124,7 +282,7 @@ const Footer = () => {
             <h3 className="mb-4 text-sm font-semibold text-white uppercase">
               Quick Links
             </h3>
-            <ul className="space-y-2">
+            <ul className="md:space-y-2">
               <li>
                 <a href="about-us" className="text-xs text-white hover:underline">
                   About Us
@@ -157,38 +315,36 @@ const Footer = () => {
             <h3 className="mb-4 text-sm font-semibold text-white uppercase">
               Community
             </h3>
-            <ul className="space-y-2">
+            <ul className="md:space-y-2">
               <li>
                 <a
                   href="support"
                   className=" flex items-center gap-1 text-xs text-white hover:underline"
                 >
                   <span> Support</span> <LuExternalLink />
+
                 </a>
-              </li>
-              <li>
-                <a href="faq" className="text-xs text-white hover:underline">
-                  FAQ
+                <a href="#" className="text-white">
+                  <LuX className="w-6 h-6 bg-[#525252] p-1 rounded" />
                 </a>
-              </li>
-              <li>
-                <a href="privacy-policy" className="text-xs text-white hover:underline">
-                  Privacy Policy
+                <a href="#" className="text-white">
+                  <LuLinkedin className="w-6 h-6 bg-[#525252] p-1 rounded" />
                 </a>
-              </li>
-              <li>
-                <a href="termsandcondition" className="text-xs text-white hover:underline">
-                  Terms & Conditions
+                <a href="#" className="text-white">
+                  <LuYoutube className="w-6 h-6 bg-[#525252] p-1 rounded" />
                 </a>
+
+              </div>
+
               </li>
             </ul>
           </div>
           {/* Social Links */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold text-white uppercase">
-              App Available On
+
+          <div className="flex flex-col gap-2 mb-4">
+            <h3 className="md:mb-4 text-sm font-semibold text-white uppercase">
+              App Available 
             </h3>
-            <div className="flex gap-2 mb-4">
               <img
                 src={androidapp}
                 className="w-24 h-auto"
@@ -196,10 +352,15 @@ const Footer = () => {
               />
               <img src={iosapp} className="w-24 h-auto" alt="iOS Store" />
             </div>
+
+
+          <div>
+           
+            
             <h3 className="mb-2 text-sm font-semibold text-white uppercase">
               Follow Us
             </h3>
-            <div className="flex gap-4">
+            <div className="flex gap-2 md:gap-4">
               <a href="#" className="text-white">
                 <LuFacebook className="w-6 h-6 bg-[#525252] p-1 rounded" />
               </a>
@@ -215,10 +376,10 @@ const Footer = () => {
               <a href="#" className="text-white">
                 <LuYoutube className="w-6 h-6 bg-[#525252] p-1 rounded" />
               </a>
+
             </div>
           </div>
         </div>
-      </div>
       </PageLayout>
     </footer>
   );
