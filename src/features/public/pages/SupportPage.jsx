@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -151,14 +150,3 @@ function CategoryCard({ icon, title, description }) {
 }
 
 export default SupportPage;
-
-import React from 'react'
-
-const SupportPage = () => {
-  return (
-    <div>SupportPage</div>
-  )
-}
-
-export default SupportPage
-
