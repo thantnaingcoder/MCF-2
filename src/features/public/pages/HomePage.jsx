@@ -97,7 +97,9 @@ const HomePage = () => {
   return (
     <div className="  mb-40">
       <div className=" relative w-full bg-home-page h-[200px] md:h-[600px] max-h-[750px] bg-cover bg-center">
-        <div className="  hidden md:flex  container  absolute z-20   flex-col gap-5 w-[650px] h-[346px] md:pt-20 md:pl-10 lg:pt-28 lg:pl-20   ">
+      <PageLayout>
+      <div className=" relative w-full  h-[200px] md:h-[600px] max-h-[750px] ">
+        <div className="  hidden md:flex  container  absolute z-20   flex-col gap-5 w-[650px] h-[346px] md:pt-20  lg:pt-28    ">
           <h1 className=" font-label text-[#FD9035] text-[25px]">
             Your path to knowledge, made simple
           </h1>
@@ -144,7 +146,10 @@ const HomePage = () => {
             <p className=" text-[#525252]">Reviewed By 365 users</p>
           </div>
         </div>
+      </div> 
+        </PageLayout> 
       </div>
+      
       {/* ...................................mobile screen hero session.................................... */}
       <div className=" md:hidden   container max-w-full bg-primary-50 p-5   z-20   flex-col gap-5     ">
         <h1 className=" font-label text-[#FD9035] text-[15px]">
