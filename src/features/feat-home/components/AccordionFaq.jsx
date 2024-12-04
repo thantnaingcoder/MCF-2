@@ -32,11 +32,12 @@ const AccordionFaq = () => {
       title: "How can I contact my instructor if I have questions?",
       description:
         "You can contact your instructor through the course page or by email. Our team is available to assist you with any questions or concerns you may have.",
-    } ,
+    },
     {
       title: "Can I get a refund if I'm not satisfied with my purchase?",
-      description: "Yes, we offer a 30-day money-back guarantee. If you're not satisfied with your purchase, you can return it within 30 days for a full refund.",
-    }
+      description:
+        "Yes, we offer a 30-day money-back guarantee. If you're not satisfied with your purchase, you can return it within 30 days for a full refund.",
+    },
   ];
   return (
     <div className=" mx-2 md:w-3/4 md:mx-auto">
