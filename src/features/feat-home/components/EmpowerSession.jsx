@@ -2,6 +2,7 @@ import React from "react";
 import Vector from "../../../assets/aboutUs/heroOther/Vector.png";
 import { BadgeCheck } from "lucide-react";
 import EmpowerPng from "../../../assets/aboutUs/heroOther/empowering.png";
+import { Link } from "react-router-dom";
 const EmpowerSession = () => {
   return (
     <div className=" grid grid-cols-1 lg:grid-cols-2 mt-20 mb-10 md:my-28">
@@ -46,9 +47,9 @@ const EmpowerSession = () => {
         </div>
 
         <div>
-          <button className="text-white   bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
+          <Link to="/applyform" className="text-white   bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
             Apply Now
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -13,6 +13,15 @@ import Lucy from "../../../assets/course/CourseTeacher/lucy.png";
 import Lucas from "../../../assets/course/CourseTeacher/MsLucas.png";
 import Ethan from "../../../assets/course/CourseTeacher/Ethan.png";
 import Ella from "../../../assets/course/CourseTeacher/MrElla.png";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 import PageLayout from "../components/PageLayout";
 import {  useNavigate } from "react-router-dom";
@@ -114,7 +123,32 @@ const CoursesPage = () => {
       </div>
 
       <PageLayout>
-        <div className=" mx-1  my-20">
+         <div className=" mt-20 mb-6 mx-1 items-center flex justify-between ">
+         <div >
+        <h1 className=" text-center md:text-start  font-heading  text-[#171717] text-sm sm:text-[20px] md:text-[31px] font-semibold">
+          Showing 1-6 of 6 Courses
+        </h1>
+      </div>
+       <div>
+       <Select className="md:w-[300px]">
+      <SelectTrigger className="w-[180px]">
+        <SelectValue placeholder="Sort By Course" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectGroup>
+          
+          <SelectItem value="business">Business</SelectItem>
+          <SelectItem value="video">Video Editing</SelectItem>
+          <SelectItem value="content">Content Writing</SelectItem>
+          <SelectItem value="conversation">Conversational </SelectItem>
+          <SelectItem value="design">Web Design</SelectItem>
+          <SelectItem value="web">Web Development</SelectItem>
+        </SelectGroup>
+      </SelectContent>
+    </Select>
+       </div>
+         </div>
+        <div className=" mx-1  mb-20">
           {topCourse.map((course, index) => (
             <div key={index} className="   bg-white flex flex-col md:flex-row mb-5 overflow-hidden">
               {/* Card Image Container */}

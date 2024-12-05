@@ -1,8 +1,10 @@
 import React from "react";
 import PageLayout from "../../public/components/PageLayout";
 import { Star } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
 const HeroSession = () => {
+  const nav= useNavigate()
   return (
     <div className=" relative w-full bg-home-page h-[200px] md:h-[600px] xl:h-full max-h-[750px] bg-cover bg-center">
       <PageLayout>
@@ -22,19 +24,19 @@ const HeroSession = () => {
             </p>
 
             <div className=" flex items-center">
-              <button
-                to="signup"
+              <Link
+                to="/about-us"
                 className="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
               >
                 Learn More
-              </button>
+              </Link>
 
-              <button
-                to="signup"
-                className=" bg-white hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+              <Link
+                to="/courses"
+                className=" bg-white  focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
               >
-                Learn More
-              </button>
+                Our Courses
+              </Link>
             </div>
           </div>
 

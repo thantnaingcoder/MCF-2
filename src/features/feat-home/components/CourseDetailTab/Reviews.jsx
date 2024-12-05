@@ -36,7 +36,7 @@ const Reviews = () => {
     },
   ];
   return (
-    <div>
+    <div className="">
       <div>
         <h1 className=" text-center md:text-start md:ms-5 font-heading mb-4 text-[#171717] text-[20px] md:text-[31px] font-bold">
           Our student reviews
@@ -110,13 +110,13 @@ const ProgressAndStar = ({ array }) => {
     <div className=" flex flex-col gap-3">
       {array.map((item, index) => (
         <div key={index} className=" flex items-center gap-5">
-          <Progress className=" bg-[#F0EADB]" value={item.progress} />
+          <Progress className=" bg-[#F0EADB] h-1 md:h-2" value={item.progress} />
           <div className=" flex items-center gap-1">
             {Array.from({ length: item.fillStarCount }).map((_, index) => (
-              <Star key={index} fill="#F7C32E" color="#F7C32E" />
+              <Star key={index} fill="#F7C32E" color="#F7C32E" className=" size-5 " />
             ))}
             {Array.from({ length: item.noFillStarCount }).map((_, index) => (
-              <Star key={index} color="#F7C32E" />
+              <Star key={index} color="#F7C32E" className=" size-5 " />
             ))}
           </div>
         </div>
@@ -131,7 +131,7 @@ const StudentReview = () => {
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLe5PABjXc17cjIMOibECLM7ppDwMmiDg6Dw&s"
         alt="Instructor avatar"
-        className="  w-[80px] h-[80px] rounded-full object-cover"
+        className=" w-[50px] h-[50px]  md:w-[80px] md:h-[80px] rounded-full object-cover"
       />
 
       <div className=" flex flex-col gap-3 md:gap-5 items-start">

@@ -27,7 +27,7 @@ const CourseCard = ({ course }) => {
       </div>
 
       {/* Card Content */}
-      <div className=" px-1 py-2 md:p-3 flex border-l-2 border-r-2 border-b-2 flex-col gap-2 md:gap-4">
+      <div className=" px-1 rounded-b-lg py-2 md:p-3 flex border-l-2 border-r-2 border-b-2 flex-col gap-2 md:gap-4">
         <div className=" flex items-center justify-between">
           <span className="px-2 py-1  text-xs font-medium text-white bg-[#FD7E14] rounded">
             {course.level}

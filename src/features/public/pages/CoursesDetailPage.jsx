@@ -12,6 +12,18 @@ import {
   BookOpenCheck,
   Clock,
 } from "lucide-react";
+import Course1 from "../../../assets/course/CourseList/course1.png";
+import Course2 from "../../../assets/course/CourseList/course2.png";
+import Course3 from "../../../assets/course/CourseList/course3.png";
+import Course4 from "../../../assets/course/CourseList/course4.png";
+import Course5 from "../../../assets/course/CourseList/course5.png";
+import Course6 from "../../../assets/course/CourseList/course6.png";
+import Emma from "../../../assets/course/CourseTeacher/Emma.png";
+import Olivia from "../../../assets/course/CourseTeacher/Olivia.png";
+import Lucy from "../../../assets/course/CourseTeacher/lucy.png";
+import Lucas from "../../../assets/course/CourseTeacher/MsLucas.png";
+import Ethan from "../../../assets/course/CourseTeacher/Ethan.png";
+import Ella from "../../../assets/course/CourseTeacher/MrElla.png";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import OverView from "../../feat-home/components/CourseDetailTab/OverView";
@@ -19,11 +31,57 @@ import Curriculum from "../../feat-home/components/CourseDetailTab/Curriculum";
 import Instructor from "../../feat-home/components/CourseDetailTab/Instructor";
 import Reviews from "../../feat-home/components/CourseDetailTab/Reviews";
 import FAQs from "../../feat-home/components/CourseDetailTab/FAQs";
+import CourseCard from "../../feat-home/components/CourseCard";
 const CoursesDetailPage = () => {
   const { slug } = useParams();
+  const topCourse = [
+    {
+      id: 1,
+      label: "Video Editing",
+      image: Course1,
+      level: "Beginner",
+      lesson: 18,
+      header: "Essential Video Editing Techniques",
+      slug: "video-editing",
+      description:
+        "Learn to create engaging videos using industry-leading software. Master transitions, effects, and storytelling through visuals",
+      instructor: "Ms.Ella",
+      instructorPhoto: Ella,
+      price: 12.0,
+    },
+    {
+      id: 2,
+      label: "Business",
+      image: Course2,
+      level: "Advanced",
+      lesson: 20,
+      header: "Fundamentals of Business Strategy",
+      slug: "business",
+      description:
+        "Introduction to business planning and strategic decision-making. Gain practical insights into crafting effective strategies to achieve business success",
+      instructor: "Olivia",
+      instructorPhoto: Olivia,
+      price: "free",
+    },
+    {
+      id: 3,
+      label: "Content Writing",
+      image: Course3,
+      level: "Intermediate",
+      lesson: 15,
+      header: "Content writing Essential",
+      slug: "content-writing",
+      description:
+        "Develop writing skills to craft compelling articles, blogs ,and copy for online audiences. Perfect for aspiring writers and marketers",
+      instructor: "Lucy",
+      instructorPhoto: Lucy,
+      price: 15.0,
+    },
+  ]
 
   return (
-    <div className=" mb-40  ">
+
+    <div  >
       <div className="bg-[#EFFAF4] ">
         <div className=" py-10">
           <PageLayout>
@@ -80,8 +138,11 @@ const CoursesDetailPage = () => {
 
       {/*...................... course detail............  */}
       <PageLayout>
+         <div className=" flex flex-col">
+
+        
         <div className="   md:mt-20 mx-2 flex flex-col  md:flex-row">
-          <div className="w-auto md:w-[65%] h-auto   ">
+          <div className="w-auto md:w-[65%]   ">
             <Tabs defaultValue="Overview" className="w-full ">
               <TabsList className="w-full bg-white gap-y-3 md:gap-y-0 grid grid-cols-3 md:grid-cols-5 my-10 md:my-0 ">
                 {[
@@ -92,45 +153,45 @@ const CoursesDetailPage = () => {
                   "FAQs",
                 ].map((item, index) => (
                   <TabsTrigger key={index} value={item} className="w-full ">
-                    {" "}
+                    
                     {item}
                   </TabsTrigger>
                 ))}
               </TabsList>
               <TabsContent
                 value="Overview"
-                className="w-full md:h-screen md:pr-10 py-10"
+                className="w-full  md:pr-10 py-10"
               >
                 <OverView />
               </TabsContent>
               <TabsContent
                 value="Curriculum"
-                className="w-full md:h-screen md:pr-10 py-10"
+                className="w-full  md:pr-10 py-10"
               >
                 <Curriculum />
               </TabsContent>
               <TabsContent
                 value="Instructor"
-                className="w-full h-screen md:pr-10 py-10"
+                className="w-full  md:pr-10 py-10"
               >
                 <Instructor />
               </TabsContent>
               <TabsContent
                 value="Reviews"
-                className="w-full md:h-screen md:pr-10 py-10"
+                className="w-full  md:pr-10 py-10"
               >
                 <Reviews />
               </TabsContent>
               <TabsContent
                 value="FAQs"
-                className="w-full md:h-screen md:pr-10 py-10"
+                className="w-full  md:pr-10 py-10"
               >
                 <FAQs />
               </TabsContent>
             </Tabs>
           </div>
 
-          <div className="md:sticky  md:h-fit  w-auto md:w-[35%]  flex flex-col gap-5 md:gap-10  ">
+          <div className="md:sticky  top-20  w-auto md:w-[35%]  flex flex-col gap-5 md:gap-10  ">
             {/* video session */}
             <div className="  bg-white overflow-hidden">
               <video
@@ -253,9 +314,32 @@ const CoursesDetailPage = () => {
               </div>
             </div>
           </div>
+
+         
         </div>
+
+             <div className=" my-10 mx-1 flex flex-col">
+             <div>
+        <h1 className=" text-center md:text-start md:ms-5 font-heading mb-4 text-[#171717] text-[20px] md:text-[31px] font-bold">
+          Top listed courses
+        </h1>
+      </div>
+              <div className="  grid grid-cols-1 md:grid-cols-3 md:gap-2 lg:gap-5  ">
+                  {topCourse.map((item) => (
+                    <CourseCard  course={item} />
+                  ))}
+              </div>
+             </div>
+              
+           </div>
+       
       </PageLayout>
+
+   
     </div>
+
+    
+         
   );
 };
 

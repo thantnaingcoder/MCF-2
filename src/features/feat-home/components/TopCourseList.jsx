@@ -20,7 +20,9 @@ import {
   Heart,
   BookOpenCheck,
 } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 const TopCourseList = () => {
+  const nav= useNavigate()
   const courses = [
     {
       id: 1,
@@ -118,12 +120,12 @@ const TopCourseList = () => {
       </div>
 
       <div className=" flex justify-center my-5 md:my-10">
-        <button
-          to="signup"
+        <Link
+          to="/courses"
           className="text-white   bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
         >
           See All Courses
-        </button>
+        </Link>
       </div>
     </div>
   );
