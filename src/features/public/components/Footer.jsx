@@ -19,7 +19,9 @@ import { LucideMail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+
   return (
+
     <footer className="mt-auto bg-neutral-700 ">
       {/* Newsletter Section */}
 
@@ -214,13 +216,17 @@ const Footer = () => {
                     <LuYoutube className="p-1 rounded stroke-1 size-5 sm:size-6 bg-neutral-600 stroke-neutral-100" />
                   </a>
                 </div>
+
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </footer>
   );
 };
 
+
 export default Footer;
+ 
