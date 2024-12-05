@@ -116,7 +116,7 @@ const CoursesPage = () => {
   ];
   return (
     <div className=" h-auto mb-40">
-      <div className="   w-full bg-course-page h-[300px] md:h-[400px] lg:h-[600px] xl:h-full max-h-[750px] bg-cover bg-center flex items-center justify-center">
+      <div className="   w-full bg-course-page h-[300px] md:h-[400px] lg:h-[600px]  max-h-[750px] bg-cover bg-center flex items-center justify-center">
         <div className="  font-heading text-[32px] md:text-[56px] text-[#ffffff]   font-bold ">
           Courses
         </div>
@@ -248,3 +248,4 @@ const CoursesPage = () => {
 };
 
 export default CoursesPage;
+

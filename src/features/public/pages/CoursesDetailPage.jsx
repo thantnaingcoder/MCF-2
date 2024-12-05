@@ -87,7 +87,7 @@ const CoursesDetailPage = () => {
   ];
 
   return (
-    <div>
+    <div className=" mb-20">
       <div className="bg-[#EFFAF4] ">
         <div className=" py-10">
           <PageLayout>
