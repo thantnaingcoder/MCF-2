@@ -8,7 +8,7 @@ import BackToTopButton from "../../../components/customComponents/BackToTopButto
 
 const PublicLayout = () => {
   return (
-    <main className=" flex flex-col h-screen">
+    <main className="flex flex-col min-h-screen ">
       <Header />
       <Suspense fallback={<PageLoading />}>
       <ScrollRestoration/>
