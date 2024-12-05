@@ -29,43 +29,39 @@ const FAQPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      {/* <section src={faqheroSection} className="relative h-[400px]">
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="container mx-auto relative z-10 flex h-full flex-col items-center justify-center text-white">
-          <h1 className="text-5xl font-bold mb-4">FAQs</h1>
-        </div>
-      </section> */}
       <section className="relative h-[400px]">
         <img
           src={faqheroSection}
           alt="FAQ Hero Section"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 " />
         <div className="container mx-auto relative z-10 flex h-full flex-col items-center justify-center text-white">
           <h1 className="text-5xl font-bold mb-4">FAQs</h1>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16">
+      <section className="py-16 mt-[120px]">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">
             Popular Frequently Ask Questions
           </h2>
 
           <Tabs defaultValue="general" className="max-w-3xl mx-auto">
-            <TabsList className="grid w-full grid-cols-4">
+            <div className="sm:px-5">
+            <TabsList className="grid grid-cols-4 lg:w-[600px] md:w-[500px] mx-auto w-[340px] px-1 gap-3">
               <TabsTrigger value="general">General</TabsTrigger>
               <TabsTrigger value="courses">Courses</TabsTrigger>
               <TabsTrigger value="subscription">Subscription</TabsTrigger>
-              <TabsTrigger value="pricing">Pricing & Plan</TabsTrigger>
+              <TabsTrigger value="pricing">Pricing&Plan</TabsTrigger>
             </TabsList>
+            </div>
 
             {/* general faq */}
-            <TabsContent value="general">
+            <TabsContent value="general" className=" mt-3 sm:mt-5 sm: px-5">
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="item-1">
+                <AccordionItem value="item-1" className=" mb-5">
                   <AccordionTrigger>
                     What types of courses do you offer?
                   </AccordionTrigger>
@@ -75,7 +71,7 @@ const FAQPage = () => {
                     development.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-2">
+                <AccordionItem value="item-2" className=" mb-5">
                   <AccordionTrigger>
                     Can I access courses on my mobile device?
                   </AccordionTrigger>
@@ -84,7 +80,7 @@ const FAQPage = () => {
                     through our responsive website and dedicated mobile apps.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-3">
+                <AccordionItem value="item-3" className=" mb-5">
                   <AccordionTrigger>
                     How do I reset my password?
                   </AccordionTrigger>
@@ -92,6 +88,37 @@ const FAQPage = () => {
                     You can reset your password by clicking the "Forgot
                     Password" link on the login page and following the
                     instructions sent to your email.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4" className=" mb-5">
+                  <AccordionTrigger>
+                    Are there any discounts or promotions for courses?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    We offer a wide range of courses across various disciplines
+                    including technology, business, creative arts, and personal
+                    development.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-5" className=" mb-5">
+                  <AccordionTrigger>
+                    How can I contact my instructor if I have questions?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    We offer a wide range of courses across various disciplines
+                    including technology, business, creative arts, and personal
+                    development.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-6" className=" mb-5">
+                  <AccordionTrigger>
+                    Can I get a refund if I'm not satisfied?
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    We offer a wide range of courses across various disciplines
+                    including technology, business, creative arts, and personal
+                    development.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -210,50 +237,64 @@ const FAQPage = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 mt-[120px] mb-[120px]">
         <div className="container mx-auto">
+          <h2 className="text-3xl font-bold mb-8 justify-center items-center text-center">
+            Ask us anything
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="relative h-[400px] md:h-auto">
+            <div className="relative h-[400px] md:h-auto group transition-all duration-300 flex-col overflow-hidden rounded-xl">
               <img
                 src={askPhoto}
                 alt="Contact support"
-                className="object-cover rounded-lg"
+                className=" transition-transform duration-500 group-hover:scale-105 w-full h-full object-cover sm:rounded-md px-5"
               />
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-8">Ask us anything</h2>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Input placeholder="Name" />
-                  <Input type="email" placeholder="Email" />
+              <form className="space-y-4 mt-10 px-5 lg:px-0 md:px-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-7">
+                  <div>
+                  <p>Name</p>
+                  <Input type="text" />
+                  </div>
+                  <div>
+                  <p>Email</p>
+                  <Input type="email" />
+                  </div>
                 </div>
-                <Input type="tel" placeholder="Phone" />
-                <Textarea placeholder="Type a question" rows={6} />
+                <div>
+                  <p>Phone</p>
+                <Input type="tel" className=" mb-7" />
+                </div>
+                <div>
+                  <p>Message</p>
+                <Textarea placeholder="Type a question" className=" mb-7" rows={6} />
+                </div>
                 <Button
                   type="submit"
-                  className="w-full md:w-auto bg-emerald-500 hover:bg-emerald-600"
+                  className="w-full md:w-auto bg-emerald-500 hover:bg-emerald-600 px-10"
                 >
                   Submit
                 </Button>
               </form>
-              <div className="mt-8 flex gap-3 items-center ">
+              <div className="mt-8 flex gap-3 items-center px-5 ">
                 <p className="font-semibold  text-gray-600 items-center">
                   Follow us on
                 </p>
                 <div className="flex space-x-3 items-center">
-                  <Link href="#" className="text-white hover:text-gray-900">
+                  <Link href="#" className="text-white hover:text-gray-200">
                     <LuFacebook className="h-5 w-5 bg-[#525252] p-1" />
                   </Link>
-                  <Link href="#" className="text-white hover:text-gray-900 ">
+                  <Link href="#" className="text-white hover:text-gray-200 ">
                     <LuInstagram className="h-5 w-5 bg-[#525252] p-1" />
                   </Link>
-                  <Link href="#" className="text-white hover:text-gray-900">
+                  <Link href="#" className="text-white hover:text-gray-200">
                     <LuX className="h-5 w-5 bg-[#525252] p-1" />
                   </Link>
-                  <Link href="#" className="text-white hover:text-gray-900">
+                  <Link href="#" className="text-white hover:text-gray-200">
                     <LuLinkedin className="h-5 w-5 bg-[#525252] p-1" />
                   </Link>
-                  <Link href="#" className="text-white hover:text-gray-900">
+                  <Link href="#" className="text-white hover:text-gray-200">
                     <LuYoutube className="h-5 w-5 bg-[#525252] p-1" />
                   </Link>
                 </div>
