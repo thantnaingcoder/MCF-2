@@ -11,7 +11,7 @@ const Header = () => {
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-7xl">
           <Link to="/" className="flex items-center">
-            <Logo className=" w-16  md:w-28 md:h-18" />
+            <Logo className=" w-16  md:w-28 md:h-16" />
           </Link>
           <div className="flex items-center lg:order-2">
             <Link

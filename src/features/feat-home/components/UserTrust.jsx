@@ -4,25 +4,25 @@ const UserTrust = () => {
   const userTrust = [
     {
       id: 1,
-      icon: <ChartLine color="#02996f" size={40} />,
+      icon: <ChartLine color="#02996f" className=" md:size-12 " />,
       count: "10K+",
       title: "Total Achievement",
     },
     {
       id: 2,
-      icon: <Users color="#02996f" size={40} />,
+      icon: <Users color="#02996f" className=" md:size-12" />,
       count: "1600K+",
       title: "Total Students",
     },
     {
       id: 3,
-      icon: <School color="#02996f" size={40} />,
+      icon: <School color="#02996f" className=" md:size-12" />,
       count: "15K+",
       title: "Classes complete",
     },
     {
       id: 4,
-      icon: <GraduationCap color="#02996f" size={40} />,
+      icon: <GraduationCap color="#02996f" className=" md:size-12" />,
       count: "100K+",
       title: "Certified Teachers",
     },
@@ -36,7 +36,7 @@ const UserTrust = () => {
         >
           {trust.icon}
           <div>
-            <h1 className=" font-heading text-[24px] text-nowrap font-semibold">
+            <h1 className=" font-heading md:text-[24px] text-nowrap font-semibold">
               {trust.count}
             </h1>
             <p className=" text-nowrap">{trust.title}</p>

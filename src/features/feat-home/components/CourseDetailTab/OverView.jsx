@@ -59,7 +59,7 @@ const OverView = () => {
           Skill you will gain
         </h1>
 
-        <div className=" flex-grow flex flex-wrap gap-5">
+        <div className=" flex-grow flex flex-wrap gap-2 md:gap-5">
           {[
             "Web Development",
             "Problem-Solving",

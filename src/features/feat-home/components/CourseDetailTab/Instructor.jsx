@@ -52,8 +52,8 @@ const Instructor = () => {
         </div>
       </div>
 
-      <div className=" flex flex-col gap-5">
-        <h1 className=" font-heading text-[#171717] text-[20px] md:text-[31px] font-bold">
+      <div className=" flex flex-col md:gap-5">
+        <h1 className=" font-heading my-5 md:my-0 text-[#171717] text-[20px] md:text-[31px] font-bold">
           About an instructor
         </h1>
         <div>

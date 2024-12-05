@@ -116,14 +116,14 @@ const CoursesPage = () => {
   ];
   return (
     <div className=" h-auto mb-40">
-      <div className="   w-full bg-course-page h-[200px] md:h-[400px] lg:h-[600px] xl:h-full max-h-[750px] bg-cover bg-center flex items-center justify-center">
+      <div className="   w-full bg-course-page h-[300px] md:h-[400px] lg:h-[600px] xl:h-full max-h-[750px] bg-cover bg-center flex items-center justify-center">
         <div className="  font-heading text-[32px] md:text-[56px] text-[#ffffff]   font-bold ">
           Courses
         </div>
       </div>
 
       <PageLayout>
-         <div className=" mt-20 mb-6 mx-1 items-center flex justify-between ">
+         <div className=" mt-10 md:mt-20 mb-6 mx-1 items-center flex justify-between ">
          <div >
         <h1 className=" text-center md:text-start  font-heading  text-[#171717] text-sm sm:text-[20px] md:text-[31px] font-semibold">
           Showing 1-6 of 6 Courses

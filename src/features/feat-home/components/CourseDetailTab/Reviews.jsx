@@ -71,7 +71,7 @@ const Reviews = () => {
       {/* form */}
       <div className=" mt-10">
         <form className=" flex flex-col gap-3">
-          <div className=" grid grid-cols-2 gap-5">
+          <div className=" grid grid-cols-1 md:grid-cols-2 gap-5">
             <div className=" flex flex-col gap-1">
               <label className=" font-heading text-[#262626]">Name</label>
               <Input />

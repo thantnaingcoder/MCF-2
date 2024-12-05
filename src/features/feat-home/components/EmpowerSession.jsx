@@ -19,8 +19,8 @@ const EmpowerSession = () => {
 
       <div className=" container flex flex-col gap-4 justify-center px-5 py-5">
         <h1 className=" text-[25px] font-label text-[#FD9035]">Welcome</h1>
-        <h1 className=" text-[25px] md:text-[39px] leading-[39px] md:leading-[50px] text-[#171717] font-heading font-semibold">
-          Empowering Your Journey to <br /> Success
+        <h1 className=" text-[22px] md:text-[39px] leading-[39px] md:leading-[50px] text-[#171717] font-heading font-semibold">
+          Empowering Your Journey to <br className=" hidden md:block" /> Success
         </h1>
         <p className=" text-[20px] text-[#737373]">
           "Our Platform offers expertly crafted courses, personallized learning
