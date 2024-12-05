@@ -4,6 +4,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 
   theme: {
+   
+
+
     fontFamily: {
       sans: ["Hind", "Padauk", "sans-serif"],
     },
@@ -54,6 +57,7 @@ export default {
         label: ["Kite One", "sans-serif"],
       },
       colors: {
+        lighterBg: "#EFFAF4",
         primary: {
           50: "#ecfdf6",
           100: "#d0fbe6",
@@ -112,6 +116,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
     },
+
   },
   plugins: [require("flowbite/plugin"), require("tailwindcss-animate")],
 };

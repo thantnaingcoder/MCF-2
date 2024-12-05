@@ -35,7 +35,13 @@ const BrandedLogoContainer = () => {
 
   return (
     <PageLayout>
-      <Marquee autoFill gradient gradientWidth={80} gradientColor="#dddeef">
+      <Marquee
+        autoFill
+        gradient
+        gradientWidth={80}
+        gradientColor="#f5f5f5"
+        pauseOnHover
+      >
         <div className="flex justify-between items-center space-x-10 md:space-x-20 md:pl-24 pl-16">
           {logos.map((logo, index) => (
             <p key={index}>{logo.iconUrl}</p>

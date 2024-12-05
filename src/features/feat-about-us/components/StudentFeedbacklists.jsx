@@ -7,7 +7,7 @@ const StudentFeedbacklists = ({ profile, name, comments }) => {
 
   return (
     <div
-      className={`select-none bg-feedbackBg  duration-500  rounded-lg w-full sm:w-[400px] min-h-[220px] flex flex-col  justify-center items-start sm:items-center px-6 sm:px-0 `}
+      className={`select-none bg-lighterBg  duration-500  rounded-lg w-full sm:w-[400px] min-h-[220px] flex flex-col  justify-center items-start sm:items-center px-6 sm:px-0 `}
     >
       <div className={`flex items-center gap-5 mb-3 pt-10`}>
         <img src={profile} alt="profile" className={`size-12`} />
