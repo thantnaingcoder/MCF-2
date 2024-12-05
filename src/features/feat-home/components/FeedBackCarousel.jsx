@@ -3,7 +3,7 @@ import studen1 from "./../../../assets/studentFeedback/student1.png";
 import studen2 from "./../../../assets/studentFeedback/student2.png";
 import studen3 from "./../../../assets/studentFeedback/student3.png";
 import { FaStarHalfAlt } from "react-icons/fa";
-import {  CardContent } from "./../../../components/ui/card.tsx";
+import { CardContent } from "./../../../components/ui/card.tsx";
 import { Star } from "lucide-react";
 import {
   Carousel,
@@ -14,49 +14,55 @@ import {
 } from "./../../../components/ui/carousel.tsx";
 const FeedBackCarousel = () => {
   const feedbacks = [
-     {
-      id:1,
-      name:"Lorenzo",
-      photo:studen1,
-      rate : 5,
-      feedback:"Earning a certificate fromm a recognized institution is a significant milestone in your career.",
-     },
-     {
-      id:2,
-      name:"Rose",
-      photo:studen2,
-      rate : 5,
-      feedback:"While online platforms are often cheaper than traditional education, costs for certificates or subscriptions can add up.",
-     },
-     {
-      id:3,
-      name:"Justin",
-      photo:studen3,
-      rate : 5,
-      feedback:"Many Courses are seen as academically rigorous, with content provided by top universities",
-     },
-     {
-      id:4,
-      name:"Lorenzo",
-      photo:studen1,
-      rate : 5,
-      feedback:"Earning a certificate fromm a recognized institution is a significant milestone in your career.",
-     },
-     {
-      id:5,
-      name:"Shaun",
-      photo:studen2,
-      rate : 5,
-      feedback:"Earning a certificate fromm a recognized institution is a significant milestone in your career.",
-     },
-     {
-      id:6,
-      name:"Lucy",
-      photo:studen3,
-      rate : 5,
-      feedback:"Earning a certificate fromm a recognized institution is a significant milestone in your career.",
-     }
-  ]
+    {
+      id: 1,
+      name: "Lorenzo",
+      photo: studen1,
+      rate: 5,
+      feedback:
+        "Earning a certificate fromm a recognized institution is a significant milestone in your career.",
+    },
+    {
+      id: 2,
+      name: "Rose",
+      photo: studen2,
+      rate: 5,
+      feedback:
+        "While online platforms are often cheaper than traditional education, costs for certificates or subscriptions can add up.",
+    },
+    {
+      id: 3,
+      name: "Justin",
+      photo: studen3,
+      rate: 5,
+      feedback:
+        "Many Courses are seen as academically rigorous, with content provided by top universities",
+    },
+    {
+      id: 4,
+      name: "Lorenzo",
+      photo: studen1,
+      rate: 5,
+      feedback:
+        "Earning a certificate fromm a recognized institution is a significant milestone in your career.",
+    },
+    {
+      id: 5,
+      name: "Shaun",
+      photo: studen2,
+      rate: 5,
+      feedback:
+        "Earning a certificate fromm a recognized institution is a significant milestone in your career.",
+    },
+    {
+      id: 6,
+      name: "Lucy",
+      photo: studen3,
+      rate: 5,
+      feedback:
+        "Earning a certificate fromm a recognized institution is a significant milestone in your career.",
+    },
+  ];
   return (
     <div className=" mt-5 md:mt-10">
       <h1 className=" text-center font-heading text-[20px] md:text-[26px] font-semibold">
@@ -83,11 +89,14 @@ const FeedBackCarousel = () => {
 
                       <div className=" flex flex-col gap-3 items-center">
                         <div className=" flex">
-                          {Array.from({ length: 4  }).map((_, index) => (
+                          {Array.from({ length: 4 }).map((_, index) => (
                             <Star key={index} fill="#F7C32E" color="#F7C32E" />
-                            
                           ))}
-                           <FaStarHalfAlt size={23} fill="#F7C32E" color="#F7C32E" />
+                          <FaStarHalfAlt
+                            size={23}
+                            fill="#F7C32E"
+                            color="#F7C32E"
+                          />
                         </div>
                         <h1 className=" font-bold text-[16px] font-heading">
                           {feed.name}

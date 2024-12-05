@@ -19,6 +19,7 @@ import { LucideMail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+
   return (
 
     <footer className="mt-auto bg-neutral-700 ">
@@ -226,4 +227,6 @@ const Footer = () => {
   );
 };
 
+
 export default Footer;
+ 
