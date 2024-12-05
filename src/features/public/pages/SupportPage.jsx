@@ -22,47 +22,47 @@ const SupportPage = () => {
       {/* Hero Section */}
       <section className="bg-[#98f8c6] py-20">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl font-bold mb-8">How can we help?</h1>
+          <h1 className="mb-8 text-4xl font-bold">How can we help?</h1>
           <div className="max-w-xl mx-auto">
             <Input
               type="search"
               placeholder="Search for help..."
-              className="bg-white h-12"
+              className="h-12 bg-white"
             />
           </div>
         </div>
       </section>
 
       {/* Help Categories */}
-      <section className="container mx-auto py-16">
-        <div className="grid md:grid-cols-3 gap-6">
+      <section className="container py-16 mx-auto">
+        <div className="grid gap-6 md:grid-cols-3">
           <CategoryCard
-            icon={<UserCircle className="h-6 w-6" />}
+            icon={<UserCircle className="w-6 h-6" />}
             title="My account"
             description="Create and manage your pathway academy account"
           />
           <CategoryCard
-            icon={<AlertTriangle className="h-6 w-6" />}
+            icon={<AlertTriangle className="w-6 h-6" />}
             title="Troubleshooting"
             description="Experiencing a technical issue? Check Here"
           />
           <CategoryCard
-            icon={<ShoppingCart className="h-6 w-6" />}
+            icon={<ShoppingCart className="w-6 h-6" />}
             title="Purchase/ Refund"
             description="Learn about purchasing courses, how to send gifts and refunds."
           />
           <CategoryCard
-            icon={<Newspaper className="h-6 w-6" />}
+            icon={<Newspaper className="w-6 h-6" />}
             title="Enrollment"
             description="Find courses to take and learn about enrollment options."
           />
           <CategoryCard
-            icon={<Shield className="h-6 w-6" />}
+            icon={<Shield className="w-6 h-6" />}
             title="Trust & Safety"
             description="trust & safety information and reporting."
           />
           <CategoryCard
-            icon={<Rocket className="h-6 w-6" />}
+            icon={<Rocket className="w-6 h-6" />}
             title="Getting Start"
             description="Learn how our education works and how to start learning."
           />
@@ -70,8 +70,8 @@ const SupportPage = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="container mx-auto py-16">
-        <h2 className="text-3xl font-bold mb-8 text-center">
+      <section className="container py-16 mx-auto">
+        <h2 className="mb-8 text-3xl font-bold text-center">
           Popular Frequently Ask Questions
         </h2>
         <div className="max-w-3xl mx-auto">
@@ -143,8 +143,8 @@ function CategoryCard({ icon, title, description }) {
       <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#98f8c6] mb-4">
         {icon}
       </div>
-      <h3 className="font-bold mb-2">{title}</h3>
-      <p className="text-gray-600 text-sm">{description}</p>
+      <h3 className="mb-2 font-bold">{title}</h3>
+      <p className="text-sm text-gray-600">{description}</p>
     </div>
   );
 }
