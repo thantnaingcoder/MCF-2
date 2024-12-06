@@ -16,69 +16,72 @@ import {
 import { BsTwitterX } from "react-icons/bs";
 
 import { LucideMail } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+  console.log(location);
 
   return (
-
-    <footer className="mt-auto bg-neutral-700 ">
+    <footer className="mt-auto bg-neutral-700 pt-24 md:pt-40 pb-10 ">
       {/* Newsletter Section */}
 
-      <div className="px-5 py-6 mx-5 -translate-y-24 rounded-lg bg-primary-500 max-w-7xl xl:mx-auto md:py-16 md:px-8 md:-translate-y-36">
-        <div className="relative flex items-center justify-end align-top lg:justify-center ">
-          <img
-            src={footericon}
-            alt="icon"
-            className="absolute bottom-0 hidden md:block w-28"
-          />
-        </div>
+      {location.pathname !== "/termsandcondition" && (
+        <div className="px-5 py-6 mx-5 -translate-y-24 rounded-lg bg-primary-500 max-w-7xl xl:mx-auto md:py-16 md:px-8 md:-translate-y-36">
+          <div className="relative flex items-center justify-end align-top lg:justify-center ">
+            <img
+              src={footericon}
+              alt="icon"
+              className="absolute bottom-0 hidden md:block w-28"
+            />
+          </div>
 
-        <div className="flex flex-col items-start lg:justify-between lg:flex-row">
-          <form className="w-full mb-6 md:w-2/3 lg:mb-0">
-            <h1 className="mb-4 text-xl font-bold leading-8 text-white font-heading md:text-3xl">
-              Join Our Newsletter
-            </h1>
-            <div className="relative">
-              <input
-                type="email"
-                id="newsletter-email"
-                className="block w-full p-4 pr-32 text-sm text-gray-900 border border-gray-300 rounded-lg lg:w-3/4 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white "
-                placeholder="Enter your email address"
-              />
-              <button
-                type="submit"
-                className="absolute px-1.5 sm:px-4  py-2 text-[10px] sm:text-xs text-white bg-black rounded-lg lg:text-sm top-3 lg:top-2 lg:right-40 font-heading right-2 "
-              >
-                Subscribe Now
-              </button>
+          <div className="flex flex-col items-start lg:justify-between lg:flex-row">
+            <form className="w-full mb-6 md:w-2/3 lg:mb-0">
+              <h1 className="mb-4 text-xl font-bold leading-8 text-white font-heading md:text-3xl">
+                Join Our Newsletter
+              </h1>
+              <div className="relative">
+                <input
+                  type="email"
+                  id="newsletter-email"
+                  className="block w-full p-4 pr-32 text-sm text-gray-900 border border-gray-300 rounded-lg lg:w-3/4 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white "
+                  placeholder="Enter your email address"
+                />
+                <button
+                  type="submit"
+                  className="absolute px-1.5 sm:px-4  py-2 text-[10px] sm:text-xs text-white bg-black rounded-lg lg:text-sm top-3 lg:top-2 lg:right-40 font-heading right-2 "
+                >
+                  Subscribe Now
+                </button>
+              </div>
+            </form>
+            <div className="flex flex-col items-start justify-start w-full lg:items-end lg:justify-center md:w-2/3">
+              <h1 className="mb-3 text-xl font-bold text-white font-heading">
+                Contact Us
+              </h1>
+              <ul className="flex flex-col items-start space-y-2 lg:items-end ">
+                <li className="flex items-center justify-center gap-2 text-white lg:justify-end">
+                  <LuPhone className="text-white size-4" />
+                  <span>Call on: 0786 778 375 028</span>
+                </li>
+                <li className="flex items-center justify-center gap-2 text-white ">
+                  <LuClock className="text-white size-4" />
+                  Time: 9am to 5pm (Sunday close)
+                </li>
+                <li className="flex items-center justify-center gap-2 text-white lg:justify-end">
+                  <LuMapPin className="text-white size-4" />
+                  789 Pine Drive, Apt 3B
+                </li>
+                <li className="flex items-center justify-center gap-2 text-white lg:justify-end">
+                  <LucideMail className="text-white size-4" />
+                  Pathway67@gmail.com
+                </li>
+              </ul>
             </div>
-          </form>
-          <div className="flex flex-col items-start justify-start w-full lg:items-end lg:justify-center md:w-2/3">
-            <h1 className="mb-3 text-xl font-bold text-white font-heading">
-              Contact Us
-            </h1>
-            <ul className="flex flex-col items-start space-y-2 lg:items-end ">
-              <li className="flex items-center justify-center gap-2 text-white lg:justify-end">
-                <LuPhone className="text-white size-4" />
-                <span>Call on: 0786 778 375 028</span>
-              </li>
-              <li className="flex items-center justify-center gap-2 text-white ">
-                <LuClock className="text-white size-4" />
-                Time: 9am to 5pm (Sunday close)
-              </li>
-              <li className="flex items-center justify-center gap-2 text-white lg:justify-end">
-                <LuMapPin className="text-white size-4" />
-                789 Pine Drive, Apt 3B
-              </li>
-              <li className="flex items-center justify-center gap-2 text-white lg:justify-end">
-                <LucideMail className="text-white size-4" />
-                Pathway67@gmail.com
-              </li>
-            </ul>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Footer Links Section */}
 
@@ -216,17 +219,13 @@ const Footer = () => {
                     <LuYoutube className="p-1 rounded stroke-1 size-5 sm:size-6 bg-neutral-600 stroke-neutral-100" />
                   </a>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </footer>
   );
 };
 
-
 export default Footer;
- 

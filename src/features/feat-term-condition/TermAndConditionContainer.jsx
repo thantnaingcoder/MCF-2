@@ -77,7 +77,7 @@ const TermAndConditionContainer = () => {
   ];
 
   return (
-    <section className="px-5 pb-20 mb-10 md:mb-15 lg:mb-20 md:px-0 md:pb-40">
+    <section className="px-5 pb-20 mb-10 md:mb-15 lg:mb-10 md:px-0 md:pb-20">
       <PageLayout>
         <div className="max-w-5xl space-y-4 md:px-5 lg:px-0 ">
           {terms.map((term) => (
