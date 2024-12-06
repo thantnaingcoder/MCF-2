@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 const TopCourseList = () => {
-  const nav= useNavigate()
+  const nav = useNavigate();
   const courses = [
     {
       id: 1,
@@ -75,12 +75,12 @@ const TopCourseList = () => {
   ];
 
   return (
-    <div className=" mt-10 md:mt-20">
+    <div className="pb-10  md:pb-20 xl:pb-32">
       <LabelHeading label="Categories" heading="Our Course Categories" />
 
       {/* ..................... mobile screen course view ........... */}
-      <div className="sm:hidden my-5 md:my-10 grid gap-2 grid-cols-2 mx-3 ">
-        <div className=" flex gap-2 items-center">
+      <div className="grid grid-cols-2 gap-2 mx-3 my-5 sm:hidden md:my-10 ">
+        <div className="flex items-center gap-2 ">
           <ChartColumn color="#02996f" size={30} />
           <div>
             <h1 className=" font-heading text-[16px] font-semibold">
@@ -90,7 +90,7 @@ const TopCourseList = () => {
           </div>
         </div>
 
-        <div className=" flex gap-2 items-center  ">
+        <div className="flex items-center gap-2 ">
           <Video color="#02996f" size={30} />
           <div>
             <h1 className=" font-heading text-[16px] font-semibold">
@@ -102,11 +102,11 @@ const TopCourseList = () => {
       </div>
       {/* ..................... mobile screen course view ........... */}
 
-      <div className=" grid justify-center sm:grid-cols-2 lg:grid-cols-4 gap-y-4 gap-2">
+      <div className="grid justify-center gap-2  sm:grid-cols-2 lg:grid-cols-4 gap-y-4">
         {courses.map((course, index) => (
           <div
             key={index}
-            className=" rounded-md items-center p-3 border-2 md:p-5 flex gap-4 shadow-md"
+            className="flex items-center gap-4 p-3 border-2 rounded-md shadow-md  md:p-5"
           >
             {course.icon}
             <div>
@@ -119,7 +119,7 @@ const TopCourseList = () => {
         ))}
       </div>
 
-      <div className=" flex justify-center my-5 md:my-10">
+      <div className="flex justify-center my-5  md:my-10">
         <Link
           to="/courses"
           className="text-white   bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"

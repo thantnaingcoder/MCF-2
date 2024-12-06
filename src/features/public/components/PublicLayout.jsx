@@ -11,9 +11,11 @@ const PublicLayout = () => {
     <main className="flex flex-col min-h-screen ">
       <Header />
       <Suspense fallback={<PageLoading />}>
-      <ScrollRestoration/>
+        <ScrollRestoration />
         <Outlet />
-         <BackToTop><BackToTopButton/></BackToTop>
+        <BackToTop>
+          <BackToTopButton />
+        </BackToTop>
       </Suspense>
       <Footer />
     </main>
