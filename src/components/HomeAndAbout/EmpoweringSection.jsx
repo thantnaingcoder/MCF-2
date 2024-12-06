@@ -1,24 +1,24 @@
-import Empowering from "../../../assets/aboutUs/heroOther/empowering.png";
-import CircleCheck from "../../../assets/aboutUs/otherIcon/circle-check.svg";
-import PageLayout from "../../public/components/PageLayout";
+import Empowering from "../../assets/aboutUs/heroOther/empowering.png";
+import CircleCheck from "../../assets/aboutUs/otherIcon/circle-check.svg";
+import PageLayout from "../../features/public/components/PageLayout";
 const EmpoweringSection = () => {
   return (
     <section className="pb-10 md:pb-16 xl:pb-32">
       <PageLayout>
-        <div className="grid xl:grid-cols-12 grid-cols-1 gap-10 xl:px-0 px-5 ">
-          <div className="col-span-1 xl:col-span-5 mx-0 sm:mx-auto xl:mx-0 ">
+        <div className="grid grid-cols-1 gap-10 px-5 xl:grid-cols-12 xl:px-0 ">
+          <div className="col-span-1 mx-0 xl:col-span-5 sm:mx-auto xl:mx-0 ">
             <img
               src={Empowering}
               alt="empowering"
-              className="object-cover h-full w-full object-top rounded-md"
+              className="object-cover object-top w-full h-full rounded-md"
             />
           </div>
-          <div className=" col-span-1 xl:col-span-7 ">
-            <div className="w-full lg:w-4/5  space-y-5 mt-0 md:mt-3 lg:mt-16">
+          <div className="col-span-1 xl:col-span-7">
+            <div className="w-full mt-0 space-y-5 lg:w-4/5 md:mt-3 lg:mt-16">
               <h1 className="block lg:hidden font-label text-sm md:text-2xl text-[#FD7E14] ">
                 Welcome
               </h1>
-              <h2 className="text-xl sm:text-2xl md:text-3xl  font-heading font-semibold text-neutral-900 ">
+              <h2 className="text-xl font-semibold sm:text-2xl md:text-3xl font-heading text-neutral-900 ">
                 Empowering Your Journey to Success
               </h2>
 

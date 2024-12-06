@@ -1,5 +1,5 @@
-import PageLayout from "../../public/components/PageLayout";
-import AchievementContainer from "../components/AchievementContainer";
+import PageLayout from "../../features/public/components/PageLayout";
+import AchievementContainer from "./AchievementContainer";
 
 const AchievementSection = () => {
   return (
