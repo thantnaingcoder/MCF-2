@@ -1,28 +1,37 @@
 import React from "react";
 import { LuAlignJustify, LuSearch } from "react-icons/lu";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import Logo from "../../../components/Logo";
-
+import { Search } from 'lucide-react';
 const Header = () => {
+  const {pathname} = useLocation();
+ 
   return (
-    <header className=" border-b-2 border-gray-200">
+    <header className=" border-b-2  border-gray-200">
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-7xl">
           <Link to="/" className="flex items-center">
-            <Logo className=" w-16  md:w-28 md:h-18" />
+            <Logo className=" w-16  md:w-28 md:h-16" />
           </Link>
           <div className="flex items-center lg:order-2">
             <Link
               to="signin"
-              className="text-gray-800 border dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+              className="hidden md:block text-gray-800 border dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
             >
               Sign In
             </Link>
             <Link
-              to="signup"
-              className="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+              to="/applyform"
+              className="hidden md:block text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
             >
-              Sign Up
+              Apply Now
+            </Link>
+
+            <Link
+              to="/applyform"
+              className=" md:hidden me-2"
+            >
+              <Search size={20} />
             </Link>
 
             <button
@@ -54,46 +63,61 @@ const Header = () => {
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
               <li>
-                <Link
+                <NavLink
                   to="/"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  style={({ isActive }) => ({
+                    color: isActive ? "#0CBC87" : "",
+                  })}
+                  className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700`}
                 >
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="about-us"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  style={({ isActive }) => ({
+                    color: isActive ? "#0CBC87" : "",
+                  })}
+                  className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700`}
                 >
                   About us
-                </Link>
+                </NavLink>
               </li>
 
               <li>
-                <Link
+                <NavLink
                   to="courses"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  style={({ isActive }) => ({
+                    color: isActive ? "#0CBC87" : "",
+                  })}
+                  className={` block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700`}
                 >
                   Courses
-                </Link>
+                </NavLink>
               </li>
 
               <li>
-                <Link
+                <NavLink
                   to="blog"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  style={({ isActive }) => ({
+                    color: isActive ? "#0CBC87" : "",
+                  })}
+                  className={` block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700`}
                 >
                   Blogs
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="contact-us"
-                  className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+                  style={({ isActive }) => ({
+                    color: isActive ? "#0CBC87" : "",
+                  })}
+                  className={` block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700`}
                 >
                   Contact us
-                </Link>
+                </NavLink>
               </li>
             </ul>
 
