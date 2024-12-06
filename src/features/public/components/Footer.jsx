@@ -22,11 +22,11 @@ const Footer = () => {
   const { pathname } = useLocation();
 
   return (
-    <footer className="mt-auto bg-neutral-700 pt-24 md:pt-40 pb-10 ">
+    <footer className="mt-auto bg-neutral-700 ">
       {/* Newsletter Section */}
 
       <div
-        className={` ${pathname === "/privacy-policy" && "hidden"} ${
+        className={` ${pathname === "/privacy-policy" && "hidden"} ${pathname === "/applyform" && "hidden"} ${pathname === "/thank-you"  && "hidden"} ${
           pathname === "/termsandcondition" && "hidden"
         } px-5 py-6 mx-5 -translate-y-24 rounded-lg bg-primary-500 max-w-7xl xl:mx-auto md:py-16 md:px-8 md:-translate-y-36`}
       >
@@ -92,9 +92,13 @@ const Footer = () => {
 
       <div
         className={` ${
-          pathname === "/privacy-policy" && "mt-5 sm:mt-10 md:pt-32"
+          pathname === "/privacy-policy" && "mt-5 sm:mt-10 md:pt-40"
         } ${
-          pathname === "/termsandcondition" && "mt-5 sm:mt-10 md:pt-32"
+          pathname === "/termsandcondition" && "mt-5 sm:mt-10 md:pt-40"
+        } ${
+          pathname === "/applyform" && "mt-5 sm:mt-10 md:pt-40"
+        } ${
+          pathname === "/thank-you" && "mt-5 sm:mt-10 md:pt-40"
         } px-5  mx-auto mb-5 -mt-16 sm:-mt-20 md:-mt-28 max-w-7xl xl:px-0`}
       >
         <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
