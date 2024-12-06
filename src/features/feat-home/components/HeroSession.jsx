@@ -2,11 +2,12 @@ import React from "react";
 import PageLayout from "../../public/components/PageLayout";
 import { Star } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
-
+import Img from "./../../../assets/home/heroOther/heroSection.png"
 const HeroSession = () => {
   const nav = useNavigate();
   return (
-    <div className="mb-10 md:mb-15 lg:mb-20 relative w-full bg-home-page h-[200px] md:h-[600px] xl:h-full max-h-[750px] bg-cover bg-center">
+    <div className="relative w-full  h-[200px] md:h-[600px] xl:h-full max-h-[750px] bg-cover bg-center">
+      <img src={Img} alt="img" className="w-full h-full absolute object-cover"/>
       <PageLayout>
         <div className=" relative w-full  h-[200px] md:h-[600px]  max-h-[750px] ">
           <div className="  hidden md:flex  container  absolute z-20   flex-col gap-5 w-[650px] h-[346px] md:pt-20  lg:pt-28    ">
