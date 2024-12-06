@@ -26,7 +26,7 @@ const Footer = () => {
     <footer className="mt-auto bg-neutral-700 ">
       {/* Newsletter Section */}
 
-      <div className={` ${pathname === "/privacy-policy" && "hidden"} px-5 py-6 mx-5 -translate-y-24 rounded-lg bg-primary-500 max-w-7xl xl:mx-auto md:py-16 md:px-8 md:-translate-y-36`}>
+      <div className={` ${pathname === "/privacy-policy" && "hidden"} ${pathname === "/termsandcondition" && "hidden"} px-5 py-6 mx-5 -translate-y-24 rounded-lg bg-primary-500 max-w-7xl xl:mx-auto md:py-16 md:px-8 md:-translate-y-36`}>
         <div className="relative flex items-center justify-end align-top lg:justify-center ">
           <img
             src={footericon}
@@ -83,7 +83,7 @@ const Footer = () => {
 
       {/* Footer Links Section */}
 
-      <div className={` ${pathname === "/privacy-policy" && "mt-5 sm:mt-10 md:pt-32"} px-5  mx-auto mb-5 -mt-16 sm:-mt-20 md:-mt-28 max-w-7xl xl:px-0`}>
+      <div className={` ${pathname === "/privacy-policy" && "mt-5 sm:mt-10 md:pt-32"} ${pathname === "/termsandcondition" && "mt-5 sm:mt-10 md:pt-32"} px-5  mx-auto mb-5 -mt-16 sm:-mt-20 md:-mt-28 max-w-7xl xl:px-0`}>
         <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {/* About Section */}
           <div className="col-span-2 md:col-span-3 lg:col-span-4 xl:col-span-1">

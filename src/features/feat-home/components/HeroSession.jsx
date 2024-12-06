@@ -40,7 +40,7 @@ const HeroSession = () => {
             </div>
           </div>
 
-          <div className=" hidden md:block right-5 -bottom-10 rounded-xl bg-white w-[285px] p-3 lg:p-5 absolute z-10">
+          <div className=" hidden md:block right-5 bottom-10 rounded-xl bg-white w-[285px] p-3 lg:p-5 absolute z-10">
             <div className=" flex flex-col gap-2">
               <h1 className=" flex items-center gap-1 text-[#171717]">
                 <Star fill="#02996f" color="#02996f" /> Trustpilot
