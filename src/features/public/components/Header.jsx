@@ -5,7 +5,7 @@ import Logo from "../../../components/Logo";
 import { Search } from 'lucide-react';
 const Header = () => {
   const {pathname} = useLocation();
- 
+
   return (
     <header className=" border-b-2  border-gray-200">
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">

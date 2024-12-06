@@ -4,9 +4,6 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 
   theme: {
-   
-
-
     fontFamily: {
       sans: ["Hind", "Padauk", "sans-serif"],
     },
@@ -116,7 +113,9 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
     },
-
   },
-  plugins: [require("flowbite/plugin"), require("tailwindcss-animate")],
+  plugins: [
+    require("flowbite/plugin"),
+    require("tailwindcss-animate"),
+  ],
 };
