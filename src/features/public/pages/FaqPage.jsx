@@ -18,12 +18,17 @@ import { Link } from "react-router-dom";
 import askPhoto from "../../../assets/faq/ask.png";
 import faqheroSection from "../../../assets/faq/heroSection.png";
 import {
+  LuClock,
+  LuExternalLink,
   LuFacebook,
   LuInstagram,
   LuLinkedin,
-  LuX,
+  LuMapPin,
+  LuPhone,
   LuYoutube,
 } from "react-icons/lu";
+
+import { BsTwitterX } from "react-icons/bs";
 
 const FAQPage = () => {
   return (
@@ -42,7 +47,7 @@ const FAQPage = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 mt-[120px]">
+      <section className="py-16 mt-10">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">
             Popular Frequently Ask Questions
@@ -50,12 +55,12 @@ const FAQPage = () => {
 
           <Tabs defaultValue="general" className="max-w-3xl mx-auto">
             <div className="sm:px-5">
-            <TabsList className="grid grid-cols-4 lg:w-[600px] md:w-[500px] mx-auto w-[340px] px-1 gap-3">
-              <TabsTrigger value="general">General</TabsTrigger>
-              <TabsTrigger value="courses">Courses</TabsTrigger>
-              <TabsTrigger value="subscription">Subscription</TabsTrigger>
-              <TabsTrigger value="pricing">Pricing&Plan</TabsTrigger>
-            </TabsList>
+              <TabsList className="grid grid-cols-4 lg:w-[600px] md:w-[500px] mx-auto w-[340px] px-1 gap-3">
+                <TabsTrigger value="general">General</TabsTrigger>
+                <TabsTrigger value="courses">Courses</TabsTrigger>
+                <TabsTrigger value="subscription">Subscription</TabsTrigger>
+                <TabsTrigger value="pricing">Pricing&Plan</TabsTrigger>
+              </TabsList>
             </div>
 
             {/* general faq */}
@@ -237,7 +242,7 @@ const FAQPage = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 mt-[120px] mb-[120px]">
+      <section className="py-16 mb-44">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8 justify-center items-center text-center">
             Ask us anything
@@ -254,21 +259,25 @@ const FAQPage = () => {
               <form className="space-y-4 mt-10 px-5 lg:px-0 md:px-0">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-7">
                   <div>
-                  <p>Name</p>
-                  <Input type="text" />
+                    <p>Name</p>
+                    <Input type="text" />
                   </div>
                   <div>
-                  <p>Email</p>
-                  <Input type="email" />
+                    <p>Email</p>
+                    <Input type="email" />
                   </div>
                 </div>
                 <div>
                   <p>Phone</p>
-                <Input type="tel" className=" mb-7" />
+                  <Input type="tel" className=" mb-7" />
                 </div>
                 <div>
                   <p>Message</p>
-                <Textarea placeholder="Type a question" className=" mb-7" rows={6} />
+                  <Textarea
+                    placeholder="Type a question"
+                    className=" mb-7"
+                    rows={6}
+                  />
                 </div>
                 <Button
                   type="submit"
@@ -277,7 +286,7 @@ const FAQPage = () => {
                   Submit
                 </Button>
               </form>
-              <div className="mt-8 flex gap-3 items-center px-5 ">
+              {/* <div className="mt-8 flex gap-3 items-center px-5 ">
                 <p className="font-semibold  text-gray-600 items-center">
                   Follow us on
                 </p>
@@ -297,6 +306,29 @@ const FAQPage = () => {
                   <Link href="#" className="text-white hover:text-gray-200">
                     <LuYoutube className="h-5 w-5 bg-[#525252] p-1" />
                   </Link>
+                </div>
+              </div> */}
+
+              <div>
+                <h3 className="mt-4 mb-2 text-lg font-bold font-heading text-gray-400">
+                  Follow Us
+                </h3>
+                <div className="flex gap-2 md:gap-4">
+                  <a href="#">
+                    <LuFacebook className="p-1 rounded size-5 sm:size-6 bg-neutral-600 fill-neutral-100 stroke-none" />
+                  </a>
+                  <a href="#">
+                    <LuInstagram className="p-1 rounded stroke-1 size-5 sm:size-6 bg-neutral-600 stroke-neutral-100" />
+                  </a>
+                  <a href="#">
+                    <BsTwitterX className="p-1 rounded stroke-1 size-5 sm:size-6 bg-neutral-600 fill-neutral-100 stroke-none" />
+                  </a>
+                  <a href="#">
+                    <LuLinkedin className="p-1 rounded stroke-1 size-5 sm:size-6 bg-neutral-600 fill-neutral-100 stroke-none " />
+                  </a>
+                  <a href="#">
+                    <LuYoutube className="p-1 rounded stroke-1 size-5 sm:size-6 bg-neutral-600 stroke-neutral-100" />
+                  </a>
                 </div>
               </div>
             </div>
