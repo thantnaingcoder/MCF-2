@@ -20,7 +20,10 @@ const SignUpForm = () => {
         />
       </div>
       <div className="mt-3 xl:mt-5  w-full md:px-0 px-5 md:w-1/2 lg:w-2/5 xl:w-2/3  xl:max-w-md xl:m-auto 2xl:m-auto ">
-        <img src={Logo} alt="logo" className="mb-5  mx-auto md:mx-0 " />
+        <Link to="/">
+          <img src={Logo} alt="logo" className="mb-5  mx-auto md:mx-0 " />
+        </Link>
+
         <h1 className="text-neutral-900 font-bold text-xl text-center md:text-start md:text-3xl 2xl:text-4xl font-heading">
           Create an Account
         </h1>
