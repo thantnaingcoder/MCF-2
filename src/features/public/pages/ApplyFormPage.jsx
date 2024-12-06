@@ -17,16 +17,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { CalendarIcon } from "lucide-react";
-import {
-  LuClock,
-  LuExternalLink,
-  LuFacebook,
-  LuInstagram,
-  LuLinkedin,
-  LuMapPin,
-  LuPhone,
-  LuYoutube,
-} from "react-icons/lu";
+import { LuFacebook, LuInstagram, LuLinkedin, LuYoutube } from "react-icons/lu";
 
 import { BsTwitterX } from "react-icons/bs";
 import { cn } from "@/lib/utils";

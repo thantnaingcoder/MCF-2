@@ -43,8 +43,7 @@ const publicRoute = [
   },
   {
 
-    path: "courses-detail",
-    element: <CoursesDetailPage />,
+  
 
     path: "courses/course-detail/:slug",
     element: <CoursesDetailPage />
