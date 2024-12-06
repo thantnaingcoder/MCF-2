@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import Star from "../../../assets/aboutUs/otherIcon/star.svg";
-import HalfStar from "../../../assets/aboutUs/otherIcon/halfstar.svg";
+import Star from "../../assets/aboutUs/otherIcon/star.svg";
+import HalfStar from "../../assets/aboutUs/otherIcon/halfstar.svg";
 
 const StudentFeedbacklists = ({ profile, name, comments }) => {
   const rating = Array.from({ length: 5 }, (_, i) => i + 1);
@@ -12,7 +12,7 @@ const StudentFeedbacklists = ({ profile, name, comments }) => {
       <div className={`flex items-center gap-5 mb-3 pt-10`}>
         <img src={profile} alt="profile" className={`size-12`} />
 
-        <div className=" flex flex-col gap-1 items-center">
+        <div className="flex flex-col items-center gap-1 ">
           <div className="flex items-center gap-1">
             {rating.map((_, i) => (
               <Fragment key={i}>

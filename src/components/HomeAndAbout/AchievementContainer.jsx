@@ -1,7 +1,7 @@
-import Total from "../../../assets/aboutUs/otherIcon/total.svg";
-import User from "../../../assets/aboutUs/otherIcon/user.svg";
-import Classes from "../../../assets/aboutUs/otherIcon/classes.svg";
-import Certified from "../../../assets/aboutUs/otherIcon/certified.svg";
+import Total from "../../assets/aboutUs/otherIcon/total.svg";
+import User from "../../assets/aboutUs/otherIcon/user.svg";
+import Classes from "../../assets/aboutUs/otherIcon/classes.svg";
+import Certified from "../../assets/aboutUs/otherIcon/certified.svg";
 import AchievementLists from "./AchievementLists";
 const AchievementContainer = () => {
   const achievement = [
@@ -27,7 +27,7 @@ const AchievementContainer = () => {
     },
   ];
   return (
-    <div className="xl:px-0 px-5 gap-5 grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 ">
+    <div className="grid grid-cols-1 gap-5 px-5 xl:px-0 md:grid-cols-2 lg:grid-cols-4 ">
       {achievement.map((item, index) => (
         <AchievementLists key={index} item={item} />
       ))}

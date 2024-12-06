@@ -1,12 +1,12 @@
-import Hewlett from "../../../assets/aboutUs/otherIcon/hewlett_logo.svg";
-import Volkswagen from "../../../assets/aboutUs/otherIcon/volkswagen_logo.svg";
-import Cisco from "../../../assets/aboutUs/otherIcon/cisco_logo.svg";
-import Samsung from "../../../assets/aboutUs/otherIcon/samsung_logo.svg";
-import Vimeo from "../../../assets/aboutUs/otherIcon/vimeo_logo.svg";
-import Citi from "../../../assets/aboutUs/otherIcon/citi_logo.svg";
-import Ericsson from "../../../assets/aboutUs/otherIcon/ericsson_logo.svg";
+import Hewlett from "../../assets/aboutUs/otherIcon/hewlett_logo.svg";
+import Volkswagen from "../../assets/aboutUs/otherIcon/volkswagen_logo.svg";
+import Cisco from "../../assets/aboutUs/otherIcon/cisco_logo.svg";
+import Samsung from "../../assets/aboutUs/otherIcon/samsung_logo.svg";
+import Vimeo from "../../assets/aboutUs/otherIcon/vimeo_logo.svg";
+import Citi from "../../assets/aboutUs/otherIcon/citi_logo.svg";
+import Ericsson from "../../assets/aboutUs/otherIcon/ericsson_logo.svg";
 import Marquee from "react-fast-marquee";
-import PageLayout from "../../public/components/PageLayout";
+import PageLayout from "../../features/public/components/PageLayout";
 
 const BrandedLogoContainer = () => {
   const logos = [
@@ -42,7 +42,7 @@ const BrandedLogoContainer = () => {
         gradientColor="#f5f5f5"
         pauseOnHover
       >
-        <div className="flex justify-between items-center space-x-10 md:space-x-20 md:pl-24 pl-16">
+        <div className="flex items-center justify-between pl-16 space-x-10 md:space-x-20 md:pl-24">
           {logos.map((logo, index) => (
             <p key={index}>{logo.iconUrl}</p>
           ))}

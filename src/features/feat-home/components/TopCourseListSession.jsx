@@ -104,10 +104,10 @@ const TopCourseListSession = () => {
   ];
 
   return (
-    <div className=" mt-10 md:mt-20">
+    <div className="pb-10  md:pb-20 xl:pb-32">
       <LabelHeading label="Discover News" heading="Our Top Listed courses" />
 
-      <div className=" px-1 grid grid-cols-1 md:grid-cols-2 gap-3 lg:grid-cols-3 md:gap-y-10 gap-y-5">
+      <div className="grid grid-cols-1 gap-3 px-1  md:grid-cols-2 lg:grid-cols-3 md:gap-y-10 gap-y-5">
         {topCourse.map((course) => (
           <CourseCard key={course.id} course={course} />
         ))}

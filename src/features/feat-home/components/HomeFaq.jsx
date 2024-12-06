@@ -37,12 +37,11 @@ const HomeFaq = () => {
     },
   ];
   return (
-    <div className=" mt-10 md:mt-20">
+    <div className="px-5 mb-10 md:mb-15 lg:mb-20 md:px-0 md:pb-10">
       <LabelHeading label="FAQ" heading="Popular Frequently asked questions" />
-      <div  className=" mx-2 md:w-3/4 md:mx-auto">
-     <AccordionFaq AccordionArray={AccordionArray} />
+      <div className="mx-2 md:w-3/4 md:mx-auto">
+        <AccordionFaq AccordionArray={AccordionArray} />
       </div>
-      
     </div>
   );
 };

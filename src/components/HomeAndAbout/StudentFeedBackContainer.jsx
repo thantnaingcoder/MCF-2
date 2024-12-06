@@ -1,8 +1,9 @@
-import Student1 from "../../../assets/aboutUs/studentFeedback/student-1.png";
-import Student2 from "../../../assets/aboutUs/studentFeedback/student-2.png";
-import Student3 from "../../../assets/aboutUs/studentFeedback/student-1.png";
-import Student4 from "../../../assets/aboutUs/studentFeedback/student-2.png";
-import Student5 from "../../../assets/aboutUs/studentFeedback/student-5.png";
+import Student1 from "../../assets/aboutUs/studentFeedback/student-1.png";
+import Student2 from "../../assets/aboutUs/studentFeedback/student-2.png";
+import Student3 from "../../assets/aboutUs/studentFeedback/student-1.png";
+import Student4 from "../../assets/aboutUs/studentFeedback/student-2.png";
+import Student5 from "../../assets/aboutUs/studentFeedback/student-5.png";
+import PageLayout from "../../features/public/components/PageLayout";
 import StudentFeedbacklists from "./StudentFeedbacklists";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation } from "swiper/modules";
@@ -10,7 +11,6 @@ import { EffectCoverflow, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
-import PageLayout from "../../public/components/PageLayout";
 
 const StudentFeedBackContainer = () => {
   const feedbacks = [
@@ -86,12 +86,12 @@ const StudentFeedBackContainer = () => {
 
       <div className="flex items-center justify-center gap-2">
         <div className="prevEl">
-          <button className="size-10 scale-75 duration-300 rounded-full bg-neutral-100 flex justify-center items-center">
+          <button className="flex items-center justify-center duration-300 scale-75 rounded-full size-10 bg-neutral-100">
             <LuChevronLeft className="size-6" />
           </button>
         </div>
         <div className="nextEl">
-          <button className="size-10 scale-75 duration-300 rounded-full bg-neutral-100 flex justify-center items-center">
+          <button className="flex items-center justify-center duration-300 scale-75 rounded-full size-10 bg-neutral-100">
             <LuChevronRight className="size-6" />
           </button>
         </div>

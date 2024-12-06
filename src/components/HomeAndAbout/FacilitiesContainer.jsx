@@ -1,5 +1,5 @@
 import FacilitiesLists from "./FacilitiesLists";
-import CircleCheck from "../../../assets/aboutUs/otherIcon/circle-check.svg";
+import CircleCheck from "../../assets/aboutUs/otherIcon/circle-check.svg";
 
 const FacilitiesContainer = () => {
   const facilities = [
@@ -23,7 +23,7 @@ const FacilitiesContainer = () => {
     },
   ];
   return (
-    <div className=" flex flex-col gap-6 md:gap-5">
+    <div className="flex flex-col gap-6 md:gap-5">
       {facilities.map((facility, index) => (
         <FacilitiesLists key={index} facility={facility} />
       ))}
