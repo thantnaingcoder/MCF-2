@@ -3,7 +3,7 @@ import PageLayout from '../components/PageLayout'
 
 const PrivacyPolicyPage = () => {
   return (
-    <div className=' h-auto mb-40'>
+    <div className=' h-auto  mb-5 md:mb-40'>
         <div className="   w-full bg-[#A4F4C5] h-[300px] md:h-[400px] lg:h-[600px]  max-h-[750px]  flex items-center justify-center">
         <div className="  font-heading text-[32px] md:text-[56px]   font-bold ">
         Privacy & Policy
@@ -11,7 +11,7 @@ const PrivacyPolicyPage = () => {
       </div>
 
       <PageLayout>
-          <div className=' mt-10 mx-3 flex flex-col gap-5'>
+          <div className=' mt-10 mx-6 flex flex-col gap-5'>
               <div>
                   <HeadingComponent heading="Effective Date: [November 1,  2024]" />
                   <NormalText text="Welcome to Pathway Academy! Your privacy is critically important to us. This Privacy Policy explains how we collect, use, share, and safeguard your personal information when you visit our website or use our services. By accessing or using our platform, you agree to the practices outlined in this policy." />
@@ -136,7 +136,7 @@ export default PrivacyPolicyPage
 
 const ListComponent = ({listArray}) => {
   return (
-    <ul className=' list-disc list-inside '>
+    <ul className=' list-disc list-outside '>
       {listArray.map((item, index) => (
         <li className=' text-justify text-[#525252] font-sans md:text-[20px] md:leading-[30px] ' key={index}>{item}</li>
       ))}
@@ -146,12 +146,12 @@ const ListComponent = ({listArray}) => {
 
 const HeadingComponent = ({heading}) => {
   return (
-    <h1 className='text-justify font-sans text-[18px] md:text-[25px] md:leading-[32px] text-[#525252] mb-5 font-semibold '>{heading}</h1>
+    <h1 className=' -ms-5 text-justify font-sans text-[18px] md:text-[25px] md:leading-[32px] text-[#525252] mb-5 font-semibold '>{heading}</h1>
   )
 }
 
 const NormalText = ({text}) => {
   return (
-    <p className=' text-justify text-[#525252] font-sans md:text-[20px] md:leading-[30px] '>{text}</p>
+    <p className='-ms-5 text-justify text-[#525252] font-sans md:text-[20px] md:leading-[30px] '>{text}</p>
   )
 }
