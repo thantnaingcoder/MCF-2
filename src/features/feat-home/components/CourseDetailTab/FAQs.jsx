@@ -4,9 +4,9 @@ import AccordionFaq from '../AccordionFaq'
 const FAQs = () => {
   const AccordionArray = [
     {
-      title: "What types of courses do you offer?",
+      title: "What will I learn in this course?",
       description:
-        "We offer a wide range of courses, including programming, design, marketing, and more. Our courses are designed to meet the needs of professionals and enthusiasts alike.",
+        "You’ll learn JavaScript fundamentals, including variables, functions, arrays, objects, DOM manipulation, and asynchronous programming. By the end, you’ll be able to build interactive, dynamic web pages and small projects.",
     },
     {
       title: "Can I access courses on my mobile device?",

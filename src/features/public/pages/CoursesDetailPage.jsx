@@ -87,7 +87,7 @@ const CoursesDetailPage = () => {
   ];
 
   return (
-    <div>
+    <div className=" mb-20">
       <div className="bg-[#EFFAF4] ">
         <div className=" py-10">
           <PageLayout>
@@ -97,11 +97,10 @@ const CoursesDetailPage = () => {
 
             <div className=" flex flex-col gap-5 px-3 md:px-5">
               <h1 className=" font-heading font-semibold text-[#171717] text-[20px] md:text-[39px]">
-                Java Programming for Beginner
+                JavaScript Programming for Beginner
               </h1>
               <p className=" text-[16px] md:text-[20px] text-[#404040] font-sans">
-                lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua
+              JavaScript is the popular programming language which powers web pages and web applications. This course will get you started coding in JavaScript
               </p>
 
               <div className=" flex items-center gap-1 md:gap-5 ]">
