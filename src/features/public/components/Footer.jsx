@@ -19,22 +19,24 @@ import { LucideMail } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
-  const location = useLocation();
-  console.log(location);
+
+   const { pathname } = useLocation();
+   
 
   return (
     <footer className="mt-auto bg-neutral-700 pt-24 md:pt-40 pb-10 ">
       {/* Newsletter Section */}
 
-      {location.pathname !== "/termsandcondition" && (
-        <div className="px-5 py-6 mx-5 -translate-y-24 rounded-lg bg-primary-500 max-w-7xl xl:mx-auto md:py-16 md:px-8 md:-translate-y-36">
-          <div className="relative flex items-center justify-end align-top lg:justify-center ">
-            <img
-              src={footericon}
-              alt="icon"
-              className="absolute bottom-0 hidden md:block w-28"
-            />
-          </div>
+
+      <div className={` ${pathname === "/privacy-policy" && "hidden"} ${pathname === "/termsandcondition" && "hidden"} px-5 py-6 mx-5 -translate-y-24 rounded-lg bg-primary-500 max-w-7xl xl:mx-auto md:py-16 md:px-8 md:-translate-y-36`}>
+        <div className="relative flex items-center justify-end align-top lg:justify-center ">
+          <img
+            src={footericon}
+            alt="icon"
+            className="absolute bottom-0 hidden md:block w-28"
+          />
+        </div>
+
 
           <div className="flex flex-col items-start lg:justify-between lg:flex-row">
             <form className="w-full mb-6 md:w-2/3 lg:mb-0">
@@ -85,7 +87,7 @@ const Footer = () => {
 
       {/* Footer Links Section */}
 
-      <div className="px-5 mx-auto mb-5 -mt-16 sm:-mt-20 md:-mt-28 max-w-7xl xl:px-0">
+      <div className={` ${pathname === "/privacy-policy" && "mt-5 sm:mt-10 md:pt-32"} ${pathname === "/termsandcondition" && "mt-5 sm:mt-10 md:pt-32"} px-5  mx-auto mb-5 -mt-16 sm:-mt-20 md:-mt-28 max-w-7xl xl:px-0`}>
         <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {/* About Section */}
           <div className="col-span-2 md:col-span-3 lg:col-span-4 xl:col-span-1">
