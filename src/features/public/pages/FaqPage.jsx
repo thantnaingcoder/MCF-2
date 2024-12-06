@@ -309,9 +309,9 @@ const FAQPage = () => {
                 </div>
               </div> */}
 
-              <div>
+              <div className=" flex items-center gap-3 mt-5 ms-3 md:ms-0 lg:ms-0 xl:ms-0">
                 <h3 className="mt-4 mb-2 text-lg font-bold font-heading text-gray-400">
-                  Follow Us
+                  Follow us on
                 </h3>
                 <div className="flex gap-2 md:gap-4">
                   <a href="#">

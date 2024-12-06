@@ -35,20 +35,21 @@ import bgImg from "../../../assets/applyForm.png";
 
 const ApplyFormPage = () => {
   return (
-    <div className="min-h-screen">
+    <div
+      className="min-h-screen"
+      style={{
+        backgroundImage: `url(${bgImg})`,
+        backgroundSize: "",
+        backgroundPosition: "center",
+        width: "100%",
+        height: "100%",
+      }}
+    >
       {/* Header */}
 
       {/* Form Section */}
 
-      <div
-        style={{
-          backgroundImage: `url(${bgImg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "100%",
-          height: "100%",
-        }}
-      >
+      <div>
         <main className="container mx-auto px-4 py-8 max-w-3xl lg:mb-36 md:mb-0 mb-20">
           <h1 className="text-3xl font-bold text-center mb-8">
             School Application Form
@@ -154,7 +155,7 @@ const ApplyFormPage = () => {
               <Button variant="outline" className="px-8">
                 Cancel
               </Button>
-              <Link to={"/thankform"}>
+              <Link to={"/thank-you"}>
                 <Button className="bg-emerald-500 hover:bg-emerald-600 px-8">
                   Submit
                 </Button>
@@ -165,8 +166,8 @@ const ApplyFormPage = () => {
           {/* icons */}
 
           <div className=" flex items-center gap-3 mt-5">
-            <h3 className="text-lg font-bold font-heading text-gray-20">
-              Follow Us
+            <h3 className="text-lg font-bold font-heading text-gray-400">
+              Follow us on
             </h3>
             <div className="flex gap-2 md:gap-4">
               <a href="#">

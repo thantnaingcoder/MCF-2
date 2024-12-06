@@ -83,7 +83,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      )}
+      
 
       {/* Footer Links Section */}
 
