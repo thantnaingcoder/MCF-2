@@ -24,6 +24,9 @@ const ApplyFormPage = lazy(() =>
 const TermsAndConditionPage = lazy(() =>
   import("../features/public/pages/TermsAndConditionPage")
 );
+const ThankPage = lazy(() =>
+  import("../features/public/pages/ThankPage")
+);
 
 const publicRoute = [
   {
@@ -79,6 +82,10 @@ const publicRoute = [
   {
     path: "applyform",
     element: <ApplyFormPage />,
+  },
+  {
+    path: "thank-you",
+    element: <ThankPage />,
   },
 ];
 
