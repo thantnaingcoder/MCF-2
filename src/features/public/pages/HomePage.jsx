@@ -8,9 +8,9 @@ import HomeFaq from "../../feat-home/components/HomeFaq";
 import MobileScreenHeroSession from "../../feat-home/components/MobileScreenHeroSession";
 import HeroSession from "../../feat-home/components/HeroSession";
 import TopCourseListSession from "../../feat-home/components/TopCourseListSession";
-import EmpoweringSection from "../../../components/HomeAndAbout/EmpoweringSection";
 import AchievementSection from "../../../components/HomeAndAbout/AchievementSection";
 import BrandedLogoSection from "../../../components/HomeAndAbout/BrandedLogoSection";
+import EmpowerSession from "../../feat-home/components/EmpowerSession";
 
 const HomePage = () => {
   return (
@@ -22,7 +22,7 @@ const HomePage = () => {
       <PageLayout>
         <TopCourseList />
 
-        <EmpoweringSection />
+        <EmpowerSession />
 
         <AchievementSection />
 
