@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
+
 export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -46,7 +47,10 @@ export default {
           },
         },
       },
-    
+      backgroundImage: {
+        "home-page": "url('./src/assets/aboutUs/heroOther/homePage.png')",
+        "course-page": "url('./src/assets/course/heroSection.png')",
+      },
       fontFamily: {
         heading: ["Epilogue", "sans-serif"],
         label: ["Kite One", "sans-serif"],
@@ -112,5 +116,5 @@ export default {
       },
     },
   },
-  plugins: [],
+ 
 };
