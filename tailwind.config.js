@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
-const flowbite = require("flowbite/plugin")
-const tailwindcssAnimate = require("tailwindcss-animate")
+import flowbite from "flowbite/plugin";
+import tailwindcssAnimate from "tailwindcss-animate";
 export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -117,8 +117,5 @@ export default {
       },
     },
   },
-  plugins: [
-    flowbite,
-    tailwindcssAnimate,
-  ],
+  plugins: [flowbite, tailwindcssAnimate],
 };

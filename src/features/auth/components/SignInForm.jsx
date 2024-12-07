@@ -1,4 +1,4 @@
-import SignIn from "../../../assets/Login/Login.png";
+import SignIn from "../../../assets/Login/AuthImg.png";
 import Logo from "../../../assets/logo.svg";
 import FormInput from "./FormInput";
 import Google from "../../../assets/Login/google-logo.png";
@@ -13,26 +13,26 @@ import Divider from "./Divider";
 const SignInForm = () => {
   return (
     <div className="h-screen">
-      <div className="w-full h-full flex md:gap-10 xl:gap-0  ">
+      <div className="flex w-full h-full md:gap-10 xl:gap-0 ">
         <div className="hidden md:block md:w-[43%] lg:w-[45%] md:h-[545px] xl:h-full">
           <img
             src={SignIn}
             alt="SignIn"
-            className="w-full h-full object-cover object-center"
+            className="object-cover object-center w-full h-full"
           />
         </div>
-        <div className="mt-3 xl:mt-14  w-full md:px-0 px-5 md:w-1/2 lg:w-2/5 xl:w-2/3  xl:max-w-md xl:m-auto 2xl:m-auto ">
+        <div className="w-full px-5 mt-3 xl:mt-14 md:px-0 md:w-1/2 lg:w-2/5 xl:w-2/3 xl:max-w-md xl:m-auto 2xl:m-auto ">
           <Link to="/">
-            <img src={Logo} alt="logo" className="mb-5  mx-auto md:mx-0 " />
+            <img src={Logo} alt="logo" className="mx-auto mb-5 md:mx-0 " />
           </Link>
-          <h1 className="text-neutral-900 font-bold text-xl text-center md:text-start md:text-3xl 2xl:text-4xl font-heading">
+          <h1 className="text-xl font-bold text-center text-neutral-900 md:text-start md:text-3xl 2xl:text-4xl font-heading">
             Welcome Back
           </h1>
-          <div className="text-nowrap text-sm md:text-base  flex items-center justify-center md:justify-start gap-2 font-heading text-neutral-600 mb-5 ">
+          <div className="flex items-center justify-center gap-2 mb-5 text-sm text-nowrap md:text-base md:justify-start font-heading text-neutral-600 ">
             <p className="2xl:text-lg ">Don’t have an account?</p>
             <Link
               to="/signup"
-              className="underline 2xl:text-lg hover:text-primary-500  duration-300"
+              className="underline duration-300 2xl:text-lg hover:text-primary-500"
             >
               Create an account
             </Link>
@@ -50,24 +50,24 @@ const SignInForm = () => {
             <div className="mb-2 ">
               <FormInput label="Password" name="password" type="password" />
             </div>
-            <div className="flex justify-between items-center ">
-              <div className="flex gap-2 sm:gap-3 items-center">
+            <div className="flex items-center justify-between ">
+              <div className="flex items-center gap-2 sm:gap-3">
                 <input type="checkbox" name="check" id="check" />
                 <label
                   htmlFor="check"
-                  className="sm:text-base text-sm  text-neutral-900 font-heading select-none"
+                  className="text-sm select-none sm:text-base text-neutral-900 font-heading"
                 >
                   Remember for 30 days
                 </label>
               </div>
 
-              <button className="sm:text-base text-sm text-nowrap  text-neutral-900 font-heading hover:underline">
+              <button className="text-sm sm:text-base text-nowrap text-neutral-900 font-heading hover:underline">
                 Forgot password?
               </button>
             </div>
             <Button
               type="submit"
-              className=" py-4 xl:py-5 2xl:py-6 2xl:text-lg bg-primary-500  hover:bg-primary-600 duration-300 font-heading "
+              className="py-4 duration-300  xl:py-5 2xl:py-6 2xl:text-lg bg-primary-500 hover:bg-primary-600 font-heading"
             >
               Sign In
             </Button>
