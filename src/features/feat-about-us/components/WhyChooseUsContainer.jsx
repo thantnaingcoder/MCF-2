@@ -31,7 +31,9 @@ const WhyChooseUsContainer = () => {
   ];
 
   return (
-    <div className="px-4 md:px-20 xl:px-0 grid grid-cols-1  gap-10 md:grid-cols-2 xl:grid-cols-4">
+    <div
+      className="grid grid-cols-1 gap-10 px-4 md:px-20 xl:px-0 md:grid-cols-2 xl:grid-cols-4"
+    >
       {chooseUs.map((item, index) => (
         <WhyChooseUsLists key={index} item={item} />
       ))}

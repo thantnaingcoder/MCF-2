@@ -1,6 +1,6 @@
 const HeroSection = ({ image, title }) => {
   return (
-    <div className="relative h-52 md:h-96 lg:h-screen">
+    <div className="relative h-56 md:h-[419px] lg:h-screen">
       <div className="absolute inset-0">
         <img
           src={image}
@@ -20,5 +20,4 @@ const HeroSection = ({ image, title }) => {
     </div>
   );
 };
-
 export default HeroSection;
