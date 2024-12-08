@@ -1,10 +1,10 @@
-import flowbitePlugin from "flowbite/plugin";
+const flowbite = require("flowbite-react/tailwind");
 /** @type {import('tailwindcss').Config} */
 
 
 export default {
   darkMode: ["class"],
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}","./node_modules/flowbite/**/*.js"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}",flowbite.content()],
 
   theme: {
     fontFamily: {
@@ -117,6 +117,6 @@ export default {
       },
     },
   },
-  plugins: [flowbitePlugin],
+  plugins: [flowbite.plugin()],
  
 };
