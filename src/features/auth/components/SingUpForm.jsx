@@ -1,13 +1,13 @@
-import SignIn from "../../../assets/Login/Login.png";
-import Logo from "../../../assets/logo.svg";
+import SignIn from "../../../../src/assets/Login/Login.png";
+import Logo from "../../../../src/assets/logo.svg";
 import FormInput from "./FormInput";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Divider from "./Divider";
 import SocialButton from "./SocialButton";
-import Google from "../../../assets/Login/google-logo.png";
-import Facebook from "../../../assets/Login/facebook.png";
-import Apple from "../../../assets/Login/apple.png";
+import Google from "../../../../src/assets/Login/google-logo.png";
+import Facebook from "../../../../src/assets/Login/facebook.png";
+import Apple from "../../../../src/assets/Login/apple.png";
 
 const SignUpForm = () => {
   return (
