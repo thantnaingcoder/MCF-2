@@ -18,12 +18,13 @@ import {
   LuYoutube,
 } from "react-icons/lu";
 import { BsTwitterX } from "react-icons/bs";
+import PageLayout from "../components/PageLayout";
 
 
 
 const ContactUsPage = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen ">
       {/* Hero Section */}
       <section className="relative h-[550px] flex items-center justify-center">
         <div className="absolute inset-0 overflow-hidden">
@@ -39,11 +40,11 @@ const ContactUsPage = () => {
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-16 px-4 md:px-6 lg:px-8 lg:mt-10">
+      <section className=" py-5 md:py-16 px-4 md:px-6 lg:px-8 lg:mt-10">
         <h2 className="text-3xl font-bold text-center mb-12">
           We're here to Help You
         </h2>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
           {[
             {
               title: "Customer Support",
@@ -89,7 +90,7 @@ const ContactUsPage = () => {
       </section>
 
       {/* Contact Form Section */}
-       <section className="py-16 mt-10 mb-20">
+       <section className=" mb:py-16 mb:mt-10 mb:mb-20">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8 justify-center items-center text-center">
             Get In Touch
@@ -158,7 +159,8 @@ const ContactUsPage = () => {
       </section>
 
       {/* Map Section */}
-      <section className="h-[400px] w-full bg-gray-200 mb-[200px]">
+     <PageLayout>
+     <section className="h-[400px] w-auto mt-10 md:mt-16 mb-28 md:mb-60  ">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1234.5678!2d-122.1234567!3d37.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDA3JzM0LjQiTiAxMjLCsDA3JzM0LjQiVw!5e0!3m2!1sen!2sus!4v1234567890"
           width="100%"
@@ -169,6 +171,7 @@ const ContactUsPage = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </section>
+     </PageLayout>
     </div>
   );
 };

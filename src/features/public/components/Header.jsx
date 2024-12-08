@@ -2,13 +2,14 @@ import React from "react";
 import { LuAlignJustify, LuSearch } from "react-icons/lu";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import Logo from "../../../components/Logo";
-import { Search } from 'lucide-react';
+import { Search } from "lucide-react";
+import { Navbar } from "flowbite-react";
 const Header = () => {
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
 
   return (
-    <header className=" border-b-2  border-gray-200">
-      <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+    <header className="  border-gray-200">
+      {/* <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-7xl">
           <Link to="/" className="flex items-center">
             <Logo className=" w-16  md:w-28 md:h-16" />
@@ -136,7 +137,83 @@ const Header = () => {
             </form>
           </div>
         </div>
-      </nav>
+      </nav> */}
+
+      <Navbar fluid rounded className="mx-auto max-w-7xl justify-around ">
+        <Navbar.Brand href="https://flowbite-react.com">
+          <Link to="/" className="flex items-center">
+            <Logo className=" w-16  md:w-28 md:h-16" />
+          </Link>
+        </Navbar.Brand>
+
+        <Navbar.Toggle />
+        <Navbar.Collapse>
+          <NavLink
+            to="/"
+            style={({ isActive }) => ({
+              color: isActive ? "#0CBC87" : "",
+            })}
+            className={`block py-2 pr-4 pl-3 text-gray-700 border-b md:border-none  md:text-[20px] hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700`}
+          >
+            Home
+          </NavLink>
+
+          <NavLink
+            to="about-us"
+            style={({ isActive }) => ({
+              color: isActive ? "#0CBC87" : "",
+            })}
+            className={`block py-2 pr-4 pl-3 text-gray-700 border-b md:border-none  md:text-[20px] hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700`}
+          >
+            About us
+          </NavLink>
+
+          <NavLink
+            to="courses"
+            style={({ isActive }) => ({
+              color: isActive ? "#0CBC87" : "",
+            })}
+            className={` block py-2 pr-4 pl-3 text-gray-700 border-b md:border-none  md:text-[20px] hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700`}
+          >
+            Courses
+          </NavLink>
+
+          <NavLink
+            to="blog"
+            style={({ isActive }) => ({
+              color: isActive ? "#0CBC87" : "",
+            })}
+            className={` block py-2 pr-4 pl-3 text-gray-700 border-b md:border-none  md:text-[20px] hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700`}
+          >
+            Blogs
+          </NavLink>
+
+          <NavLink
+            to="contact-us"
+            style={({ isActive }) => ({
+              color: isActive ? "#0CBC87" : "",
+            })}
+            className={` block py-2 pr-4 pl-3 text-gray-700 md:text-[20px] hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700`}
+          >
+            Contact us
+          </NavLink>
+        </Navbar.Collapse>
+
+        <div className="hidden lg:flex items-center">
+          <Link
+            to="signin"
+            className="hidden md:block text-gray-800 border dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+          >
+            Sign In
+          </Link>
+          <Link
+            to="/applyform"
+            className="hidden md:block text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+          >
+            Apply Now
+          </Link>
+        </div>
+      </Navbar>
     </header>
   );
 };

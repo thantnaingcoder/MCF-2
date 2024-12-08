@@ -75,7 +75,7 @@ const TopCourseList = () => {
   ];
 
   return (
-    <div className="pb-10  md:pb-20 xl:pb-32">
+    <div className="pb-10 mt-10 md:pb-10 xl:pb-16">
       <LabelHeading label="Categories" heading="Our Course Categories" />
 
       {/* ..................... mobile screen course view ........... */}

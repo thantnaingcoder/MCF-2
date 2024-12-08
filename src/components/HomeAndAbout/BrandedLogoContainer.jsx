@@ -39,7 +39,7 @@ const BrandedLogoContainer = () => {
         autoFill
         gradient
         gradientWidth={80}
-        gradientColor="#f5f5f5"
+        gradientColor="white"
         pauseOnHover
       >
         <div className="flex items-center justify-between pl-16 space-x-10 md:space-x-20 md:pl-24">

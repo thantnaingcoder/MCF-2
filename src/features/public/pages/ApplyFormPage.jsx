@@ -27,7 +27,7 @@ import bgImg from "../../../assets/applyForm.png";
 const ApplyFormPage = () => {
   return (
     <div
-      className="min-h-screen"
+      className="min-h-screen bg-no-repeat bg-cover bg-center"
       style={{
         backgroundImage: `url(${bgImg})`,
         backgroundSize: "",
