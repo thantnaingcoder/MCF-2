@@ -1,32 +1,18 @@
-import { lazy } from "react";
 
-const AboutUsPage = lazy(() => import("../features/public/pages/AboutUsPage"));
-const ContactUsPage = lazy(() =>
-  import("../features/public/pages/ContactUsPage")
-);
-const HomePage = lazy(() => import("../features/public/pages/HomePage"));
-const CoursesPage = lazy(() => import("../features/public/pages/CoursesPage"));
-const BlogPage = lazy(() => import("../features/public/pages/BlogPage"));
-const BlogDetailPage = lazy(() =>
-  import("../features/public/pages/BlogDetailPage")
-);
-const CoursesDetailPage = lazy(() =>
-  import("../features/public/pages/CoursesDetailPage")
-);
-const FaqPage = lazy(() => import("../features/public/pages/FaqPage"));
-const SupportPage = lazy(() => import("../features/public/pages/SupportPage"));
-const PrivacyPolicyPage = lazy(() =>
-  import("../features/public/pages/PrivacyPolicyPage")
-);
-const ApplyFormPage = lazy(() =>
-  import("../features/public/pages/ApplyFormPage")
-);
-const TermsAndConditionPage = lazy(() =>
-  import("../features/public/pages/TermsAndConditionPage")
-);
-const ThankPage = lazy(() =>
-  import("../features/public/pages/ThankPage")
-);
+
+import AboutUsPage from "../features/public/pages/AboutUsPage";
+import ContactUsPage from "../features/public/pages/ContactUsPage";
+import HomePage from "../features/public/pages/HomePage";
+import CoursesPage from "../features/public/pages/CoursesPage";
+import BlogPage from "../features/public/pages/BlogPage";
+import BlogDetailPage from "../features/public/pages/BlogDetailPage";
+import CoursesDetailPage from "../features/public/pages/CoursesDetailPage";
+import FaqPage from "../features/public/pages/FaqPage";
+import SupportPage from "../features/public/pages/SupportPage";
+import PrivacyPolicyPage from "../features/public/pages/PrivacyPolicyPage";
+import ApplyFormPage from "../features/public/pages/ApplyFormPage";
+import TermsAndConditionPage from "../features/public/pages/TermsAndConditionPage";
+import ThankPage from "../features/public/pages/ThankPage";
 
 const publicRoute = [
   {
@@ -42,12 +28,8 @@ const publicRoute = [
     element: <CoursesPage />,
   },
   {
-
-  
-
     path: "courses/course-detail/:slug",
-    element: <CoursesDetailPage />
-
+    element: <CoursesDetailPage />,
   },
   {
     path: "blog",
